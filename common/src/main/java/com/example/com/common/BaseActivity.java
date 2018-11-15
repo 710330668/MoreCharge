@@ -3,7 +3,6 @@ package com.example.com.common;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,16 +12,13 @@ import android.os.Bundle;
 import android.support.annotation.IntDef;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.com.common.util.AppUtils;
-import com.example.com.common.util.LogUtils;
-import com.example.com.common.util.ToastUtils;
 import com.example.com.utils.AppManager;
+import com.example.com.utils.LogUtils;
+import com.example.com.utils.ToastUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -34,7 +30,7 @@ import io.reactivex.functions.Consumer;
 
 
 /**
- * Created by 71033 on 2017/10/9.
+ * Created by 71033 on 2018/11/15.
  */
 
 
@@ -234,9 +230,9 @@ public abstract class BaseActivity extends FragmentActivity {
      *
      * @return
      */
-    public String getVersionName() {
-        return AppUtils.getAppVersionName();
-    }
+//    public String getVersionName() {
+//        return AppUtils.getAppVersionName();
+//    }
 
     protected static void showMessageOKCancel(final Activity context, String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(context)
