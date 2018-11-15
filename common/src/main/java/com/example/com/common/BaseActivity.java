@@ -16,9 +16,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.com.utils.AppManager;
-import com.example.com.utils.LogUtils;
-import com.example.com.utils.ToastUtils;
+import com.example.com.common.util.AppManager;
+import com.example.com.common.util.AppUtils;
+import com.example.com.common.util.LogUtils;
+import com.example.com.common.util.ToastUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -230,9 +231,9 @@ public abstract class BaseActivity extends FragmentActivity {
      *
      * @return
      */
-//    public String getVersionName() {
-//        return AppUtils.getAppVersionName();
-//    }
+    public String getVersionName() {
+        return AppUtils.getAppVersionName();
+    }
 
     protected static void showMessageOKCancel(final Activity context, String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(context)

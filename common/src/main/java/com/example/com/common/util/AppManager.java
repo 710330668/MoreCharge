@@ -1,4 +1,4 @@
-package com.example.com.utils;
+package com.example.com.common.util;
 
 /**
  * Created by 71033 on 2018/9/12.
