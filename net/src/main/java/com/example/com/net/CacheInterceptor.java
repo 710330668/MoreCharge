@@ -10,7 +10,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by 71033 on 2018/4/17.
+ * Created by 71033 on 2018/11/16.
  */
 public class CacheInterceptor implements Interceptor {
     private static final String TAG = "CacheInterceptor";

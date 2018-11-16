@@ -27,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * <p>
  * 类说明
  * </p>
- * Created by wpf on 2017/12/20.
+ * Created by wpf on 2018/11/16.
  */
 
 public class HttpClient {

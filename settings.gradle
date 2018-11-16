@@ -1,1 +1,1 @@
-include ':app', ':common', ':net'
+include ':app', ':common', ':net', ':imageloader'

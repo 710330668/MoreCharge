@@ -8,7 +8,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * <p>
  * log拦截器
  * </p>
- * Created by wpf on 2017/12/6.
+ * Created by wpf on 2018/11/16.
  */
 
 public class LoggerInterceptor implements HttpLoggingInterceptor.Logger {
