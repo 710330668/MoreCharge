@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <RelativeLayout
+        android:id="@+id/rv_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_mine"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:src="@mipmap/mine_icon" />
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="德州市"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="5dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_city_name"
+            android:src="@mipmap/arrow_down" />
+
+        <ImageView
+            android:id="@+id/iv_code_scan"
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/code_scan" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFE7E7E7"
+        app:layout_constraintTop_toBottomOf="@+id/rv_top_layout" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_line"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#FFFD8B06"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#FFFD8B06"
+        app:tabTextColor="#FF666666" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tab_main" />
+
 
 </android.support.constraint.ConstraintLayout>
