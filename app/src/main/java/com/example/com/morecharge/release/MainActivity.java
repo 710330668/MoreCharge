@@ -1,23 +1,23 @@
-package com.example.com.morecharge;
+package com.example.com.morecharge.release;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.common.BaseFragment;
-import com.example.com.morecharge.main.ui.activity.MineActivity;
-import com.example.com.morecharge.main.ui.fragment.ArchitectureFragment;
-import com.example.com.morecharge.main.ui.fragment.CleanKeepingFragment;
-import com.example.com.morecharge.main.ui.fragment.DownWindFragment;
-import com.example.com.morecharge.main.ui.fragment.PartTimeJobFragment;
+import com.example.com.morecharge.R;
+import com.example.com.morecharge.release.main.ui.fragment.ArchitectureFragment;
+import com.example.com.morecharge.release.main.ui.fragment.CleanKeepingFragment;
+import com.example.com.morecharge.release.main.ui.fragment.DownWindFragment;
+import com.example.com.morecharge.release.main.ui.fragment.PartTimeJobFragment;
+import com.example.com.morecharge.usercenter.MineActivity;
 
 import java.util.ArrayList;
 import java.util.List;

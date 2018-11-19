@@ -1,20 +1,19 @@
-package com.example.com.morecharge.main.ui.activity;
+package com.example.com.morecharge.receive.main;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
 
 /**
- * 我的  activity
+ * Created by 71033 on 2018/11/19.
  */
+public class ReceiveMainActivity extends BaseActivity {
 
-public class MineActivity extends BaseActivity {
     @Override
     public int bindLayout() {
-        return R.layout.activity_mine;
+        return R.layout.activity_receive_main;
     }
 
     @Override
