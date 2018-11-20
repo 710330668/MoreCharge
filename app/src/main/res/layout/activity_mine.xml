@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF0F0F0"
-    tools:context=".release.main.ui.activity.MineActivity">
+    tools:context=".usercenter.MineActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <RelativeLayout
         android:id="@+id/rv_top_layout"
@@ -60,12 +61,174 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:includeFontPadding="false"
-                android:text="首页"
+                android:text="客服"
                 android:textColor="#333333"
                 android:textSize="11sp" />
 
         </LinearLayout>
 
     </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/tv_go_order"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_user_back_ground"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/user_center_bg"
+                app:layout_constraintDimensionRatio="H,250:119"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_user_portrait"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/user_portrait"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_user_portrait"
+                app:layout_constraintLeft_toRightOf="@+id/iv_user_portrait"
+                app:layout_constraintTop_toTopOf="@+id/iv_user_portrait">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王建国"
+                    android:textColor="#333333"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="151****9865"
+                    android:textColor="#333333"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_user_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="评分：4.89"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_user_portrait"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_user_portrait" />
+
+            <ImageView
+                android:id="@+id/iv_user_score"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_user_portrait"
+                app:layout_constraintRight_toLeftOf="@+id/tv_user_score"
+                app:layout_constraintTop_toTopOf="@+id/iv_user_portrait" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_receive_release"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_user_back_ground"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user_back_ground">
+
+                <RadioGroup
+                    android:id="@+id/rg_button_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_release"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_user_bg_release_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="发单APP"
+                        android:textColor="@color/FFFFFF" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="27dp"
+                        android:background="#070002" />
+
+                    <RadioButton
+                        android:id="@+id/rb_receive"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_user_bg_release_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="接单APP"
+                        android:textColor="@drawable/bg_user_tc_receive_selector" />
+
+                </RadioGroup>
+
+            </android.support.v7.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/fm_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_receive_release" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_go_order"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_user_center_button"
+        android:gravity="center"
+        android:text="去发单"
+        android:textColor="#FFFFFF"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
