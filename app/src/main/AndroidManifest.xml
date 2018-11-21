@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".usercenter.MineActivity"></activity>
+        <activity android:name=".main.login.LoginActivity"></activity>
         <activity android:name=".main.register.RegisterActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwNextActivity"></activity>

@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.main.login.LoginActivity;
 
 import butterknife.BindView;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 /**
@@ -61,7 +61,7 @@ public class MineActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.rb_receive, R.id.rb_release})
+    @OnClick({R.id.rb_receive, R.id.rb_release,R.id.iv_user_portrait})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_receive:
@@ -77,6 +77,9 @@ public class MineActivity extends BaseActivity {
                 replace(mReleaseFragment, R.id.fm_fragment_container);
 
                 mRoot.setBackgroundColor(Color.parseColor("#F0F0F0"));
+                break;
+            case R.id.iv_user_portrait:
+                startActivity(LoginActivity.class);
                 break;
         }
     }
