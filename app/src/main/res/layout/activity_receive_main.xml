@@ -75,6 +75,7 @@
                 android:orientation="horizontal">
 
                 <RelativeLayout
+                    android:id="@+id/lly_today_liushui"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">

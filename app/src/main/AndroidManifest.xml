@@ -22,6 +22,9 @@
         <activity android:name=".main.register.RegisterActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwNextActivity"></activity>
+        <activity android:name=".receive.main.ReceiveOrderListActivity"></activity>
+        <activity android:name=".receive.main.TodayLiushuiActivity"></activity>
+        <activity android:name=".receive.main.ScoreActivity"></activity>
     </application>
 
 </manifest>
