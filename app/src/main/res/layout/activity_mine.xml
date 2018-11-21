@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF0F0F0"
@@ -70,11 +71,12 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scroll_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/tv_go_order"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/rv_top_layout">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -224,11 +226,13 @@
         android:layout_marginBottom="26dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/bg_user_center_button"
         android:gravity="center"
         android:text="去发单"
         android:textColor="#FFFFFF"
         android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_layout" />
 
 </android.support.constraint.ConstraintLayout>

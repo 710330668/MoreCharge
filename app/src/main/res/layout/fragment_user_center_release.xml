@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--第一行-->
+    <LinearLayout
+        android:id="@+id/ll_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_release_item"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintDimensionRatio="H,223:67"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_mine_authentication"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/mine_authentication" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="我的认证"
+                android:textColor="#333333"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine_wallet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/mine_wallet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="我的钱包"
+                android:textColor="#333333"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/mine_order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="我的订单"
+                android:textColor="#333333"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--第二行-->
+    <LinearLayout
+        android:id="@+id/ll_receipt_code"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_top_layout"
+        app:layout_constraintRight_toLeftOf="@+id/ll_scan"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top_layout">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mine_receipt_code" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="我的收款码"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@+id/ll_receipt_code"
+        app:layout_constraintRight_toLeftOf="@+id/ll_watermelon_credit"
+        app:layout_constraintTop_toTopOf="@+id/ll_receipt_code">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mine_release_scan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="扫一扫"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_watermelon_credit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@+id/ll_scan"
+        app:layout_constraintRight_toRightOf="@+id/ll_top_layout"
+        app:layout_constraintTop_toTopOf="@+id/ll_scan">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/watermelon_credit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="西瓜信用"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <!--第三行-->
+    <LinearLayout
+        android:id="@+id/ll_mine_score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_top_layout"
+        app:layout_constraintRight_toLeftOf="@+id/ll_complain_advice"
+        app:layout_constraintTop_toBottomOf="@+id/ll_receipt_code">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mine_score" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="我的收款码"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_complain_advice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@+id/ll_mine_score"
+        app:layout_constraintRight_toLeftOf="@+id/ll_mine_setting"
+        app:layout_constraintTop_toTopOf="@+id/ll_mine_score"
+        android:layout_marginStart="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/complain_advice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="投诉建议"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mine_setting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@+id/ll_complain_advice"
+        app:layout_constraintRight_toRightOf="@+id/ll_top_layout"
+        app:layout_constraintTop_toTopOf="@+id/ll_mine_score">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mine_seeting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="设置"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <!--第四行-->
+    <LinearLayout
+        android:id="@+id/ll_mine_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_release_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_mine_score"
+        app:layout_constraintRight_toRightOf="@+id/ll_mine_score"
+        app:layout_constraintTop_toBottomOf="@+id/ll_mine_score"
+        app:layout_goneMarginTop="3dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mine_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="我的消息"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
