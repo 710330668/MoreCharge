@@ -25,6 +25,9 @@
         <activity android:name=".receive.main.ReceiveOrderListActivity"></activity>
         <activity android:name=".receive.main.TodayLiushuiActivity"></activity>
         <activity android:name=".receive.main.ScoreActivity"></activity>
+        <activity android:name=".receive.main.ReceiveMainActivity"></activity>
+        <activity android:name=".receive.main.TodayReceiveOrderActivity"></activity>
+        <activity android:name=".receive.main.WaterMelonCreditActivity" />
     </application>
 
 </manifest>

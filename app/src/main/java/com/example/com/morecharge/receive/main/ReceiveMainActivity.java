@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.usercenter.MineActivity;
 
 import butterknife.OnClick;
 
@@ -35,7 +36,8 @@ public class ReceiveMainActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.lly_today_liushui, R.id.btn_receive})
+    @OnClick({R.id.lly_today_liushui, R.id.btn_receive,R.id.iv_user_center,R.id.rl_score,R.id.rl_today_receive_order,
+    R.id.rl_water_melon_credit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.lly_today_liushui:
@@ -43,6 +45,18 @@ public class ReceiveMainActivity extends BaseActivity {
                 break;
             case R.id.btn_receive:
                 startActivity(ReceiveOrderListActivity.class);
+                break;
+            case R.id.iv_user_center:
+                startActivity(MineActivity.class);
+                break;
+            case R.id.rl_score:
+                startActivity(ScoreActivity.class);
+                break;
+            case R.id.rl_today_receive_order:
+                startActivity(TodayReceiveOrderActivity.class);
+                break;
+            case R.id.rl_water_melon_credit:
+                startActivity(WaterMelonCreditActivity.class);
                 break;
         }
     }

@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +17,9 @@
             android:background="#FD8B06">
 
             <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:src="@mipmap/icon_back"/>
@@ -79,6 +81,18 @@
                     android:layout_weight="1"
                     android:background="#CFCFCF" />
 
+                <com.example.com.morecharge.view.MyRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:starBackground = "@mipmap/star_empty"
+                    app:starDrawBackground = "@mipmap/star_full"
+                    app:starHeight = "18dp"
+                    app:starWidth = "18dp"
+                    app:starDistance = "3dp"
+                    />
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0.1dp"
@@ -99,6 +113,126 @@
             android:text="评分指标"
             android:textSize="13sp"
             android:textColor="@color/C666666"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="质量"
+                android:textSize="13sp"
+                android:textColor="@color/C666666"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                />
+
+            <com.example.com.morecharge.view.MyRatingBar
+                android:id="@+id/ratingBar_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                app:starBackground = "@mipmap/star_empty"
+                app:starDrawBackground = "@mipmap/star_full"
+                app:starHeight = "18dp"
+                app:starWidth = "18dp"
+                app:starDistance = "15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="非常好"
+                android:textColor="@color/C999999"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="态度"
+                android:textSize="13sp"
+                android:textColor="@color/C666666"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                />
+
+            <com.example.com.morecharge.view.MyRatingBar
+                android:id="@+id/ratingBar_attitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                app:starBackground = "@mipmap/star_empty"
+                app:starDrawBackground = "@mipmap/star_full"
+                app:starHeight = "18dp"
+                app:starWidth = "18dp"
+                app:starDistance = "15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="非常好"
+                android:textColor="@color/C999999"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进度"
+                android:textSize="13sp"
+                android:textColor="@color/C666666"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                />
+
+            <com.example.com.morecharge.view.MyRatingBar
+                android:id="@+id/ratingBar_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                app:starBackground = "@mipmap/star_empty"
+                app:starDrawBackground = "@mipmap/star_full"
+                app:starHeight = "18dp"
+                app:starWidth = "18dp"
+                app:starDistance = "15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="非常好"
+                android:textColor="@color/C999999"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

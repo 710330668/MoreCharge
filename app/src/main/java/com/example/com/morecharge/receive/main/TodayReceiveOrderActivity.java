@@ -2,7 +2,6 @@ package com.example.com.morecharge.receive.main;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
@@ -10,13 +9,14 @@ import com.example.com.morecharge.R;
 import butterknife.OnClick;
 
 /**
- * Created by 71033 on 2018/11/21.
+ * Created by 71033 on 2018/11/22.
  */
-public class TodayLiushuiActivity extends BaseActivity {
+public class TodayReceiveOrderActivity extends BaseActivity {
+
 
     @Override
     public int bindLayout() {
-        return R.layout.activity_today_liushui;
+        return R.layout.activity_today_receive_order;
     }
 
     @Override
@@ -34,15 +34,8 @@ public class TodayLiushuiActivity extends BaseActivity {
 
     }
 
-
-    @OnClick({R.id.iv_back, R.id.tv_shouyi})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.iv_back:
-                finish();
-                break;
-            case R.id.tv_shouyi:
-                break;
-        }
+    @OnClick(R.id.iv_back)
+    public void onViewClicked() {
+        finish();
     }
 }
