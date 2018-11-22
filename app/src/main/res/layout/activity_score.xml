@@ -79,19 +79,6 @@
                     android:layout_weight="1"
                     android:background="#CFCFCF" />
 
-                <com.example.com.morecharge.view.MyRatingBar
-                    android:id="@+id/starBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    app:starCount="5"
-                    app:starDistance="10dp"
-                    app:starEmpty="@mipmap/star_empty"
-                    app:starFill="@mipmap/star_full"
-                    app:starSize="30dp"
-                    />
-
-
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0.1dp"
