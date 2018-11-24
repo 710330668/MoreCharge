@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,6 +17,7 @@ import com.example.com.morecharge.release.main.ui.fragment.CleanKeepingFragment;
 import com.example.com.morecharge.release.main.ui.fragment.DownWindFragment;
 import com.example.com.morecharge.release.main.ui.fragment.PartTimeJobFragment;
 import com.example.com.morecharge.usercenter.MineActivity;
+import com.example.com.morecharge.view.CustomViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tab_main)
     TabLayout mTabMain;
     @BindView(R.id.tab_container)
-    ViewPager mVpContainer;
+    CustomViewPager mVpContainer;
 
     private String[] titles = {"顺风腿", "建筑工地", "兼职", "保洁"};
     private List<BaseFragment> fragmentList = new ArrayList<>();
@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setView(Bundle savedInstanceState) {
-
+        mVpContainer.setScanScroll(false);
     }
 
     @Override

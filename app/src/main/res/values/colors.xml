@@ -6,10 +6,11 @@
     <color name="FFFFFF">#FFFFFF</color>
     <color name="FF9A2E">#FF9A2E</color>
     <color name="F4F4F4">#F4F4F4</color>
-    <color name="FD8B06">#FD8B06</color>
     <color name="C333333">#333333</color>
     <color name="C666666">#666666</color>
     <color name="C999999">#999999</color>
     <color name="E36B00">#E36B00</color>
 
+    <color name="color_999999">#999999</color>
+    <color name="FD8B06">#FD8B06</color>
 </resources>
