@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.receive.main.WaterMelonCreditActivity;
+import com.example.com.morecharge.usercenter.auth.MyAuthActivity;
 import com.example.com.morecharge.usercenter.wallet.MyWalletActivity;
 
 import butterknife.ButterKnife;
@@ -60,6 +61,7 @@ public class UserCenterReceiveFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_mine_authentication:
+                startActivity(MyAuthActivity.class);
                 break;
             case R.id.ll_mine_wallet:
                 startActivity(MyWalletActivity.class);

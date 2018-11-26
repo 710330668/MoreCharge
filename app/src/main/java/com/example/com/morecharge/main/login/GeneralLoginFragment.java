@@ -15,6 +15,7 @@ import com.example.com.morecharge.main.register.RegisterActivity;
 import com.example.com.morecharge.main.retrieve.RetrievePwActivity;
 import com.example.com.morecharge.receive.response.LoginResponse;
 import com.example.com.morecharge.remote.Injection;
+import com.example.com.morecharge.usercenter.MineActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -110,6 +111,7 @@ public class GeneralLoginFragment extends BaseFragment {
                         if(!TextUtils.isEmpty(loginResponse.getAccess_token())){
                             ToastUtils.showShort(getActivity(),"登录成功");
                             saveUserInfor(loginResponse);
+                            startActivity(MineActivity.class);
                         }else{
                             ToastUtils.showShort(getActivity(),"登录失败");
                         }

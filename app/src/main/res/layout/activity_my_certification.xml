@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@color/FD8B06">
+
+            <RelativeLayout
+                android:id="@+id/rv_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <LinearLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:src="@mipmap/mine_home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:includeFontPadding="false"
+                        android:text="首页"
+                        android:textColor="@color/FFFFFF"
+                        android:textSize="11sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="我的认证"
+                    android:textColor="@color/FFFFFF"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:src="@mipmap/customer_service" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:includeFontPadding="false"
+                        android:text="客服"
+                        android:textColor="@color/FFFFFF"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_rect_round_white"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="120dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="35dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_personal_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="个人认证"
+                        android:textSize="14sp"
+                        android:textColor="@color/C666666"
+                        android:background="@drawable/shape_rect_round_gray"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+                <!--<view-->
+                    <!--android:layout_width="0.2dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_gravity="center"/>-->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_enterprise_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="企业认证"
+                        android:textSize="14sp"
+                        android:textColor="@color/C666666"
+                        android:background="@drawable/shape_rect_round_gray"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#F0F0F0"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="完成企业认证"
+                        android:textColor="#999999"
+                        android:textSize="14dp"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="完成企业认证"
+                        android:textColor="#999999"
+                        android:textSize="14dp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="57dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_launcher"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#F0F0F0"/>
+
+            <com.example.com.morecharge.view.CustomViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+            </com.example.com.morecharge.view.CustomViewPager>
+
+        </LinearLayout>
+
+        <com.example.com.morecharge.view.MyImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="87dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

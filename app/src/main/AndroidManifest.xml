@@ -68,6 +68,7 @@
         <activity android:name=".usercenter.wallet.MyWalletActivity" />
         <activity android:name=".usercenter.wallet.ReChargeActivity" />
         <activity android:name=".usercenter.wallet.ChoosePayMethodActivity" />
+        <activity android:name=".usercenter.auth.MyAuthActivity" />
 
         <service android:name="com.amap.api.location.APSService"></service>
     </application>
