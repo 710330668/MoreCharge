@@ -7,7 +7,10 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -22,6 +25,8 @@ import com.amap.api.maps2d.model.BitmapDescriptorFactory;
 import com.amap.api.maps2d.model.MyLocationStyle;
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.release.main.ui.activity.BuySubBillingRuleActivity;
+import com.example.com.morecharge.view.SelectInsuranceDialog;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -47,7 +52,6 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
     TextView mTvAppointAddress;
     @BindView(R.id.tv_near_buy)
     TextView mTvNearBuy;
-
 
 
     private static final String TAG = "DownWindFragment";
@@ -92,7 +96,7 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
     }
 
 
-    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery})
+    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery, R.id.tv_cost, R.id.tv_recommend_cost, R.id.tv_good_insurance, R.id.tv_good_insurance_2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_buy_on_sub:
@@ -105,7 +109,37 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
                 mCosSubBuy.setVisibility(View.GONE);
                 mCosPick.setVisibility(View.VISIBLE);
                 break;
+            case R.id.tv_recommend_cost:
+            case R.id.tv_cost:
+                startActivity(BuySubBillingRuleActivity.class);
+                break;
+            case R.id.tv_good_insurance_2:
+            case R.id.tv_good_insurance:
+                // TODO: 2018/11/26 弹出货损保险dialog
+                showInsuranceDialog();
+                break;
         }
+    }
+
+    private void showInsuranceDialog() {
+        final SelectInsuranceDialog.Builder builder = new SelectInsuranceDialog.Builder(getContext());
+        SelectInsuranceDialog dialog = builder.setNavigationButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).setPositionButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).createDialog();
+
+        Window window = dialog.getWindow();
+        window.setGravity(Gravity.BOTTOM);
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        window.setWindowAnimations(R.style.dialog_animation);
+        dialog.show();
     }
 
 

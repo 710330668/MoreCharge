@@ -249,14 +249,14 @@
 
                     <TextView
                         android:id="@+id/tv_recommend_cost"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:gravity="center"
                         android:text="推荐费用 10元"
                         android:textColor="#999999"
                         android:textSize="11sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_cost"
                         app:layout_constraintLeft_toLeftOf="@+id/tv_appoint_address"
+                        app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_cost" />
 
                     <ImageView
