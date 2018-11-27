@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.View;
+import android.widget.RadioButton;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
@@ -25,6 +26,10 @@ public class MyAuthActivity extends BaseActivity {
 
     @BindView(R.id.viewpager)
     CustomViewPager viewpager;
+    @BindView(R.id.btn_personal_auth)
+    RadioButton btnPersonalAuth;
+    @BindView(R.id.btn_enterprise_auth)
+    RadioButton btnEnterpriseAuth;
 
     private List<Fragment> fragmentList = new ArrayList<>();
     private PersonalAuthFragment pAuthFragment;
@@ -53,6 +58,7 @@ public class MyAuthActivity extends BaseActivity {
     public void doBusiness(Context mContext) {
         viewpager.setAdapter(adapter);
         viewpager.setScanScroll(false);
+        btnPersonalAuth.setChecked(true);
     }
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -86,9 +92,13 @@ public class MyAuthActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_personal_auth:
+                btnPersonalAuth.setChecked(true);
+                btnEnterpriseAuth.setChecked(false);
                 viewpager.setCurrentItem(0);
                 break;
             case R.id.btn_enterprise_auth:
+                btnPersonalAuth.setChecked(false);
+                btnEnterpriseAuth.setChecked(true);
                 viewpager.setCurrentItem(1);
                 break;
         }

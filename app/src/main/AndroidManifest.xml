@@ -68,10 +68,13 @@
         <activity android:name=".usercenter.wallet.ReChargeActivity" />
         <activity android:name=".usercenter.wallet.ChoosePayMethodActivity" />
         <activity android:name=".usercenter.auth.MyAuthActivity" />
+        <activity android:name=".usercenter.auth.IdentityAuthActivity" />
+        <activity android:name=".usercenter.auth.LegalPersonAuthActivity" />
 
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity"></activity>
+        <activity android:name=".usercenter.auth.BusinessLicActivity" />
     </application>
 
 </manifest>

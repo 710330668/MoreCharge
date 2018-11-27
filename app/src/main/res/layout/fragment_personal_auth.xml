@@ -70,11 +70,13 @@
                     />
 
                 <Button
+                    android:id="@+id/btn_identity_auth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="去认证"
                     android:textSize="13sp"
-                    android:textColor="@color/FFFFFF"/>
+                    android:textColor="@color/FFFFFF"
+                    android:background="@drawable/bg_go_auth"/>
             </LinearLayout>
 
             <LinearLayout
@@ -99,11 +101,13 @@
                     />
 
                 <Button
+                    android:id="@+id/btn_face_auth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="去认证"
                     android:textSize="13sp"
-                    android:textColor="@color/FFFFFF"/>
+                    android:textColor="@color/FFFFFF"
+                    android:background="@drawable/bg_go_auth"/>
             </LinearLayout>
         </LinearLayout>
 
