@@ -75,6 +75,10 @@
 
         <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity"></activity>
         <activity android:name=".usercenter.auth.BusinessLicActivity" />
+        <activity android:name=".usercenter.setting.SettingActivity" />
+        <activity android:name=".usercenter.setting.ChangePhoneActivity" />
+        <activity android:name=".usercenter.setting.ChangePwActivity" />
+        <activity android:name=".usercenter.setting.ChangePw2Activity" />
     </application>
 
 </manifest>

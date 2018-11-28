@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.receive.main.WaterMelonCreditActivity;
 import com.example.com.morecharge.usercenter.auth.MyAuthActivity;
+import com.example.com.morecharge.usercenter.setting.SettingActivity;
+import com.example.com.morecharge.usercenter.wallet.MyWalletActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -62,6 +65,7 @@ public class UserCenterReleaseFragment extends BaseFragment {
                 startActivity(MyAuthActivity.class);
                 break;
             case R.id.ll_mine_wallet:
+                startActivity(MyWalletActivity.class);
                 break;
             case R.id.ll_mine_order:
                 break;
@@ -72,12 +76,14 @@ public class UserCenterReleaseFragment extends BaseFragment {
             case R.id.ll_scan:
                 break;
             case R.id.ll_watermelon_credit:
+                startActivity(WaterMelonCreditActivity.class);
                 break;
             case R.id.ll_mine_score:
                 break;
             case R.id.ll_complain_advice:
                 break;
             case R.id.ll_mine_setting:
+                startActivity(SettingActivity.class);
                 break;
             case R.id.ll_mine_message:
                 break;
