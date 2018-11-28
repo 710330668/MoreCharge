@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.com.morecharge">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".release.MainActivity">
+        <activity android:name=".receive.main.scan.ScanRecordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +26,34 @@
         <activity android:name=".main.register.RegisterActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwActivity"></activity>
         <activity android:name=".main.retrieve.RetrievePwNextActivity"></activity>
+
+        <activity
+            android:name=".receive.main.integrate.MyIntegrateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="我的积分" />
+        <activity
+            android:name=".receive.main.goodsdetail.GoodsMoreActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="积分商城" />
+        <activity
+            android:name=".receive.main.address.AddressListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="地址列表" />
+        <!--<activity-->
+        <!--android:name=".receive.main.scan.ScanActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--android:label="扫码应用demo" />-->
+
+        <activity
+            android:name=".receive.main.goodsdetail.GoodsToPayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="去支付 中的商品详情" />
+        <activity
+            android:name=".receive.main.address.GoodsLacationFromMapActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="选择地址"
+            android:windowSoftInputMode="stateHidden" />
+
     </application>
 
 </manifest>

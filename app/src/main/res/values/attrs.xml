@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TopTitleBar -->
+    <declare-styleable name="TopBar">
+        <attr name="leftSrc" format="reference"></attr>
+        <attr name="centerText" format="string"></attr>
+        <attr name="rightSrc" format="reference"></attr>
+
+        <attr name="isShowRightText" format="boolean"></attr>
+        <attr name="rightTextColor" format="color"></attr>
+        <attr name="rightText" format="string"></attr>
+
+        <attr name="warnSrc" format="reference"></attr>
+
+        <attr name="isShowWarn" format="boolean"></attr>
+        <attr name="isShowLeft" format="boolean"></attr>
+        <attr name="isShowRight" format="boolean"></attr>
+
+        <attr name="isBack" format="boolean"></attr>
+
+        <attr name="centerTextColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension" />
+        <attr name="btnTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

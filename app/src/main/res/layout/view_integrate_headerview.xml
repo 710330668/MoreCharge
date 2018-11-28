@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/intgrade_num_fl"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="#FF9A2E">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:text="当前积分"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small_size" />
+
+            <TextView
+                android:id="@+id/intgrade_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300分"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_big_size_36" />
+
+
+            <!--<include layout="@layout/view_integrade_item" />-->
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/intgrade_divider_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="@color/FF9A2E" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="积分商城"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_normal_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="更多"
+            android:textColor="#999999"
+            android:textSize="@dimen/font_normal_size" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

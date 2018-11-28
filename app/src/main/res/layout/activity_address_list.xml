@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.com.morecharge.ui.widget.TopBar
+            android:id="@+id/address_list_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/inteGrateColor"
+            app:centerText="选择收货地址"
+            app:isShowLeft="true"
+            app:isShowRightText="false"
+            app:leftSrc="@mipmap/ic_back"
+            app:rightText="管理"
+            app:rightTextColor="@android:color/white" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/address_list_recy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/address_add_btn"
+            android:layout_below="@id/address_list_topbar"
+            app:layout_constraintTop_toBottomOf="@id/address_list_topbar" />
+
+        <Button
+            android:id="@+id/address_add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_btn_normal_height"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_integrade_bg_btn"
+            android:text="添加新地址"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

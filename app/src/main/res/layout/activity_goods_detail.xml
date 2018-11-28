@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.com.morecharge.ui.widget.TopBar
+        android:id="@+id/goods_detail_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/inteGrateColor"
+        app:centerText="商品详情"
+        app:isShowLeft="true"
+        app:isShowRightText="false"
+        app:leftSrc="@mipmap/ic_back"
+        app:rightTextColor="@android:color/white" />
+
+
+    <com.example.com.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore
+        android:id="@+id/goods_detail_ptlm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/goods_detail_change_btn"
+        android:layout_below="@+id/goods_detail_topbar"
+        android:orientation="vertical">
+
+        <com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.youth.banner.Banner
+                    android:id="@+id/goods_detail_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:delay_time="5000"
+                    app:indicator_drawable_selected="@drawable/bg_indicator_selected_vp"
+                    app:indicator_drawable_unselected="@drawable/bg_indicator_normal_vp"
+                    app:indicator_height="4dp"
+                    app:indicator_margin="4dp"
+                    app:indicator_width="20dp" />
+
+                <TextView
+                    android:id="@+id/goods_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="沂蒙山土鸡蛋"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="300积分"
+                        android:textColor="#FD8B07"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="市场价：35元"
+                        android:textColor="#999999" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_item_normal_height"
+                        android:gravity="center_vertical|center"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="13dp"
+                            android:src="@mipmap/ic_gallary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="上滑查看更多详情"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/font_normal_size" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView>
+
+        <com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+
+            </LinearLayout>
+
+        </com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView>
+
+    </com.example.com.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore>
+
+
+    <Button
+        android:id="@+id/goods_detail_change_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_btn_normal_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_integrade_bg_btn"
+        android:text="立即兑换"
+        android:textColor="@android:color/white" />
+
+    <!--<Button-->
+    <!--android:id="@+id/btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="回到顶部" />-->
+
+</RelativeLayout>

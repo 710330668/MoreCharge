@@ -6,4 +6,8 @@
     <color name="FFFFFF">#FFFFFF</color>
     <color name="FF9A2E">#FF9A2E</color>
     <color name="F4F4F4">#F4F4F4</color>
+    <color name="inteGrateColor">#FD8B07</color>
+    <color name="inteGrateColorSelected">#FD8801</color>
+    <color name="divider">#F4F4F4</color>
+
 </resources>

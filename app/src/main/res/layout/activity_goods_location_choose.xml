@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lacation_choose_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_item_normal_height"
+            android:background="@color/inteGrateColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/lacation_choose_city_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lacation_choose_city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="济南市"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_down_triangle" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/lacation_choose_input_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_location_choose_inout"
+                android:hint="请输入位置"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/lacation_choose_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_normal_size" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lacation_choose_ll"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="30dp"
+            android:background="#F2F2F2"
+            android:elevation="5dp"
+            app:cardCornerRadius="5dp">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lacation_choose_recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

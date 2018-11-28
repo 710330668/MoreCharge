@@ -10,6 +10,12 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,5 +39,9 @@ dependencies {
     annotationProcessor dep.bKCompiler
     implementation dep.butterKnife
     implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:cardview-v7:25.3.1'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation project(path: ':zxinglib')
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/integrade_item_root_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/integrade_item_iv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="15dp"
+            android:src="@mipmap/ic_item_eggs" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/integrade_item_iv"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/integrade_item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="双黄土鸡蛋"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_normal_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/integrade_item_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="这里是鸡蛋的描述"
+                android:textColor="#999999"
+                android:textSize="@dimen/font_small_size" />
+
+            <TextView
+                android:id="@+id/integrade_item_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000积分"
+                android:textColor="#FD8B07"
+                android:textSize="@dimen/font_small_size" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_integrade_bg_btn"
+            android:text="兑换"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
