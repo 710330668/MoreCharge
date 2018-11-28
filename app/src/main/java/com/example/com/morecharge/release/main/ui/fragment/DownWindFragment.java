@@ -27,6 +27,7 @@ import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.release.main.ui.activity.BuySubBillingRuleActivity;
 import com.example.com.morecharge.view.SelectInsuranceDialog;
+import com.example.com.morecharge.view.SelectPickTimeDialog;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -96,7 +97,7 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
     }
 
 
-    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery, R.id.tv_cost, R.id.tv_recommend_cost, R.id.tv_good_insurance, R.id.tv_good_insurance_2})
+    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery, R.id.tv_cost, R.id.tv_recommend_cost, R.id.tv_good_insurance, R.id.tv_good_insurance_2, R.id.tv_pick_time, R.id.tv_immediately_pick})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_buy_on_sub:
@@ -115,10 +116,34 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
                 break;
             case R.id.tv_good_insurance_2:
             case R.id.tv_good_insurance:
-                // TODO: 2018/11/26 弹出货损保险dialog
                 showInsuranceDialog();
                 break;
+            case R.id.tv_pick_time:
+            case R.id.tv_immediately_pick:
+                showSelectTimeDialog();
+                break;
         }
+    }
+
+    private void showSelectTimeDialog() {
+        final SelectPickTimeDialog.Builder builder = new SelectPickTimeDialog.Builder(getContext());
+        SelectPickTimeDialog dialog = builder.setNavigationButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).setPositionButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).createDialog();
+
+        Window window = dialog.getWindow();
+        window.setGravity(Gravity.BOTTOM);
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        window.setWindowAnimations(R.style.dialog_animation);
+        dialog.show();
     }
 
     private void showInsuranceDialog() {
