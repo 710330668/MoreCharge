@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.main.login.LoginActivity;
+import com.example.com.morecharge.receive.main.ReceiveMainActivity;
+import com.example.com.morecharge.release.MainActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -61,7 +63,7 @@ public class MineActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.rb_receive, R.id.rb_release,R.id.iv_user_portrait})
+    @OnClick({R.id.rb_receive, R.id.rb_release,R.id.iv_user_portrait,R.id.tv_go_order})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_receive:
@@ -80,6 +82,13 @@ public class MineActivity extends BaseActivity {
                 break;
             case R.id.iv_user_portrait:
                 startActivity(LoginActivity.class);
+                break;
+            case R.id.tv_go_order:
+                if(mTvGoOrder.getText().equals("去发单")){
+                    startActivity(MainActivity.class);
+                }else{
+                    startActivity(ReceiveMainActivity.class);
+                }
                 break;
         }
     }

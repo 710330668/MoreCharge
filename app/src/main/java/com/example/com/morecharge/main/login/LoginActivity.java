@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.com.common.BaseActivity;
 import com.example.com.morecharge.R;
-import com.example.com.morecharge.ui.CustomViewPager;
+import com.example.com.morecharge.view.CustomViewPager;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".release.main.ui.activity.BuySubBillingRuleActivity">
+
+
+    <View
+        android:id="@+id/view_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="12dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="23dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_bar"
+        app:layout_constraintLeft_toLeftOf="@+id/view_top_bar"
+        app:layout_constraintTop_toTopOf="@+id/view_top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计费规则"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_bar"
+        app:layout_constraintLeft_toLeftOf="@+id/view_top_bar"
+        app:layout_constraintRight_toRightOf="@+id/view_top_bar"
+        app:layout_constraintTop_toTopOf="@+id/view_top_bar" />
+
+
+    <View
+        android:id="@+id/view_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/view_top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:text="基础配送费"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_line_2"
+        app:layout_constraintLeft_toLeftOf="@+id/view_line_2"
+        app:layout_constraintTop_toTopOf="@+id/view_line_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="13dp"
+        android:text="12元"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_line_2"
+        app:layout_constraintRight_toRightOf="@+id/view_line_2"
+        app:layout_constraintTop_toTopOf="@+id/view_line_2" />
+
+
+    <View
+        android:id="@+id/view_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/view_line_4"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+    <TextView
+        android:id="@+id/tv_line_3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="距离附加费"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/view_line_3"
+        app:layout_constraintTop_toTopOf="@+id/view_line_3" />
+
+
+    <TextView
+        android:id="@+id/tv_distance_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="3-5公里"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_line_3_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line_3_title" />
+
+    <TextView
+        android:id="@+id/tv_distance__cost_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="13dp"
+        android:text="每公里+2元"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_distance_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_distance_1" />
+
+    <TextView
+        android:id="@+id/tv_distance_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="5-10公里"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_line_3_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance_1" />
+
+    <TextView
+        android:id="@+id/tv_distance__cost_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+12元"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_distance_2"
+        app:layout_constraintRight_toRightOf="@+id/tv_distance__cost_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_distance_2" />
+
+    <TextView
+        android:id="@+id/tv_distance_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="10-100公里"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_line_3_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance_2" />
+
+    <TextView
+        android:id="@+id/tv_distance__cost_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每公里+6元"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_distance_3"
+        app:layout_constraintRight_toRightOf="@+id/tv_distance__cost_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_distance_3" />
+
+    <View
+        android:id="@+id/view_line_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/view_line_5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance__cost_3" />
+
+    <TextView
+        android:id="@+id/tv_line_4_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="重量附加费"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/view_line_4"
+        app:layout_constraintTop_toTopOf="@+id/view_line_4" />
+
+    <TextView
+        android:id="@+id/tv_weight_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="5-21公斤的部分"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_line_4_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line_4_title" />
+
+    <TextView
+        android:id="@+id/tv_weight__cost_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="13dp"
+        android:text="每公斤+2元"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_weight_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_weight_1" />
+
+    <View
+        android:id="@+id/view_line_5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_instruction_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weight_1" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="溢价说明"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/view_line_5"
+        app:layout_constraintTop_toTopOf="@+id/view_line_5" />
+
+    <TextView
+        android:id="@+id/tv_instruction_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="15dp"
+        android:text="在恶劣天气、下单高峰情况下，为促进骑手接单，平台可能会临时适当调整价格，以保障良好的服务体验。"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_line_4_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction" />
+
+</android.support.constraint.ConstraintLayout>

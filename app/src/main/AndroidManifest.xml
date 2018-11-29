@@ -14,13 +14,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".receive.main.scan.ScanRecordActivity">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a8461e0ede101ac29b84c4d654a5e24e" />
+
+        <activity android:name=".release.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".usercenter.MineActivity" />
+        <activity android:name=".main.login.LoginActivity" />
+        <activity android:name=".main.register.RegisterActivity" />
+        <activity android:name=".main.retrieve.RetrievePwActivity" />
+        <activity android:name=".main.retrieve.RetrievePwNextActivity" />
+        <activity android:name=".receive.main.ReceiveOrderListActivity" />
+        <activity android:name=".receive.main.TodayLiushuiActivity" />
+        <activity android:name=".receive.main.ScoreActivity" />
+        <activity android:name=".receive.main.ReceiveMainActivity" />
+        <activity android:name=".receive.main.TodayReceiveOrderActivity" />
+        <activity android:name=".receive.main.WaterMelonCreditActivity" />
+        <activity android:name=".usercenter.wallet.MyWalletActivity" />
+        <activity android:name=".usercenter.wallet.ReChargeActivity" />
+        <activity android:name=".usercenter.wallet.ChoosePayMethodActivity" />
+        <activity android:name=".usercenter.auth.MyAuthActivity" />
+        <activity android:name=".usercenter.auth.IdentityAuthActivity" />
+        <activity android:name=".usercenter.auth.LegalPersonAuthActivity" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity"></activity>
+        <activity android:name=".usercenter.auth.BusinessLicActivity" />
+        <activity android:name=".usercenter.setting.SettingActivity" />
+        <activity android:name=".usercenter.setting.ChangePhoneActivity" />
+        <activity android:name=".usercenter.setting.ChangePwActivity" />
+        <activity android:name=".usercenter.setting.ChangePw2Activity" />
         <activity android:name=".usercenter.MineActivity"></activity>
         <activity android:name=".main.login.LoginActivity"></activity>
         <activity android:name=".main.register.RegisterActivity"></activity>

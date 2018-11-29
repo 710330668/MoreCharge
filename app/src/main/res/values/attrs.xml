@@ -30,5 +30,39 @@
         <attr name="tvTextSize" format="dimension" />
         <attr name="btnTextSize" format="dimension" />
     </declare-styleable>
+    <!-- 自定义星星属性 -->
+    <declare-styleable name="star">
+        //星星数量
+        <attr name="starsNum" format="integer"></attr>
+        //星星宽度
+        <attr name="starWidth" format="dimension"></attr>
+        //星星高度
+        <attr name="starHeight" format="dimension"></attr>
+        //星星间距
+        <attr name="starDistance" format="dimension"></attr>
+        //星星背景
+        <attr name="starBackground" format="reference"></attr>
+        //星星变化背景
+        <attr name="starDrawBackground" format="reference"></attr>
+        //控件是否可以点击
+        <attr name="starClickable" format="boolean"></attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Dialog">
+
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+
 
 </resources>
