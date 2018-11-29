@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.receive.main.WaterMelonCreditActivity;
+import com.example.com.morecharge.receive.main.integrate.MyIntegrateActivity;
 import com.example.com.morecharge.usercenter.auth.MyAuthActivity;
 import com.example.com.morecharge.usercenter.setting.SettingActivity;
 import com.example.com.morecharge.usercenter.wallet.MyWalletActivity;
+import com.example.zxinglib.android.CaptureActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -74,11 +76,13 @@ public class UserCenterReleaseFragment extends BaseFragment {
             case R.id.ll_receipt_code:
                 break;
             case R.id.ll_scan:
+                startActivity(CaptureActivity.class);
                 break;
             case R.id.ll_watermelon_credit:
                 startActivity(WaterMelonCreditActivity.class);
                 break;
             case R.id.ll_mine_score:
+                startActivity(MyIntegrateActivity.class);
                 break;
             case R.id.ll_complain_advice:
                 break;
