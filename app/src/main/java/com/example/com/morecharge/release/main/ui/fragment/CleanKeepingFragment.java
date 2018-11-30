@@ -9,7 +9,7 @@ import com.example.com.morecharge.R;
 public class CleanKeepingFragment extends BaseFragment {
     @Override
     protected int setLayoutResouceId() {
-        return R.layout.fragment_architecture;
+        return R.layout.fragment_clean_keeping;
     }
 
     @Override

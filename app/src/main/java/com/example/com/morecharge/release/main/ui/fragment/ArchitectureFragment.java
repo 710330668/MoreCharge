@@ -17,6 +17,8 @@ import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.model.MyLocationStyle;
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.release.main.ui.activity.ContractPersonActivity;
+import com.example.com.morecharge.release.main.ui.activity.ContractWorkActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -71,7 +73,7 @@ public class ArchitectureFragment extends BaseFragment implements AMapLocationLi
         mMapView.onResume();
     }
 
-    @OnClick({R.id.rb_pack_person, R.id.rb_pack_work})
+    @OnClick({R.id.rb_pack_person, R.id.rb_pack_work, R.id.tv_type_of_work_edit, R.id.iv_type_of_work_arrow,R.id.tv_work_order,R.id.tv_person_order})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_pack_person:
@@ -83,6 +85,12 @@ public class ArchitectureFragment extends BaseFragment implements AMapLocationLi
                 mRbPakcPerson.setChecked(false);
                 mCosPackPerson.setVisibility(View.GONE);
                 mCosPackWork.setVisibility(View.VISIBLE);
+                break;
+            case R.id.tv_person_order:
+                startActivity(ContractPersonActivity.class);
+                break;
+            case R.id.tv_work_order:
+                startActivity(ContractWorkActivity.class);
                 break;
         }
     }

@@ -9,7 +9,7 @@ import com.example.com.morecharge.R;
 public class PartTimeJobFragment extends BaseFragment {
     @Override
     protected int setLayoutResouceId() {
-        return R.layout.fragment_architecture;
+        return R.layout.fragment_parttime_job;
     }
 
     @Override

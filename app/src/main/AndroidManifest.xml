@@ -3,7 +3,6 @@
     package="com.example.com.morecharge">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -45,13 +44,12 @@
 
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity"></activity>
+        <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity" />
         <activity android:name=".usercenter.auth.BusinessLicActivity" />
         <activity android:name=".usercenter.setting.SettingActivity" />
         <activity android:name=".usercenter.setting.ChangePhoneActivity" />
         <activity android:name=".usercenter.setting.ChangePwActivity" />
         <activity android:name=".usercenter.setting.ChangePw2Activity" />
-
         <activity
             android:name=".receive.main.integrate.MyIntegrateActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -64,10 +62,10 @@
             android:name=".receive.main.address.AddressListActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="地址列表" />
-        <!--<activity-->
-        <!--android:name=".receive.main.scan.ScanActivity"-->
-        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-        <!--android:label="扫码应用demo" />-->
+        <!-- <activity -->
+        <!-- android:name=".receive.main.scan.ScanActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="扫码应用demo" /> -->
 
         <activity
             android:name=".receive.main.goodsdetail.GoodsToPayActivity"
@@ -78,7 +76,8 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="选择地址"
             android:windowSoftInputMode="stateHidden" />
-
+        <activity android:name=".release.main.ui.activity.ContractPersonActivity" />
+        <activity android:name=".release.main.ui.activity.ContractWorkActivity"></activity>
     </application>
 
 </manifest>

@@ -88,6 +88,8 @@
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/bg_empty"
                     android:hint="请填写您的地址"
+                    android:textColor="#ff999999"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_person_project_positon"
                     app:layout_constraintLeft_toRightOf="@+id/tv_person_project_positon"
                     app:layout_constraintRight_toLeftOf="@+id/im_voice"
@@ -123,17 +125,22 @@
                     app:layout_constraintTop_toBottomOf="@+id/view_line_person_1" />
 
                 <TextView
+                    android:id="@+id/tv_type_of_work_edit"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/bg_empty"
                     android:hint="去选择"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff999999"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_type_of_work"
                     app:layout_constraintLeft_toRightOf="@+id/tv_person_project_positon"
                     app:layout_constraintRight_toLeftOf="@+id/im_voice"
                     app:layout_constraintTop_toTopOf="@+id/tv_type_of_work" />
 
                 <ImageView
+                    android:id="@+id/iv_type_of_work_arrow"
                     android:layout_width="11dp"
                     android:layout_height="15dp"
                     android:layout_marginRight="21dp"
@@ -195,6 +202,8 @@
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/bg_empty"
                     android:hint="请填写您的地址"
+                    android:textColor="#ff999999"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_work_project_positon"
                     app:layout_constraintLeft_toRightOf="@+id/tv_work_project_positon"
                     app:layout_constraintRight_toLeftOf="@+id/im_work_voice"
@@ -235,6 +244,9 @@
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/bg_empty"
                     android:hint="去选择"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff999999"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_type_of_project"
                     app:layout_constraintLeft_toRightOf="@+id/tv_work_project_positon"
                     app:layout_constraintRight_toLeftOf="@+id/im_work_voice"
