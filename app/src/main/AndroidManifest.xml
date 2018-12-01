@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".receive.main.scan.ScanRecordActivity">
+        <activity android:name=".receive.main.myskills.MySkillsCheckActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,6 +53,18 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="选择地址"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".receive.main.myskills.MySkillsAddActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="技能添加" />
+        <!--<activity-->
+            <!--android:name=".receive.main.myskills.MySkillsCheckActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+            <!--android:label="技能查看" />-->
+        <activity
+            android:name=".receive.main.myskills.AddSkillsDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="查看技能详情" />
 
     </application>
 

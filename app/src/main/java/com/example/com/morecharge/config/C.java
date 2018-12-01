@@ -10,7 +10,7 @@ public interface C {
 
 
     //测试
-    String TEST_BASE_URL = "http://www.cheeshou.com/";
+    String TEST_BASE_URL = "https://api.huoduoduo360.com";
 
     //http缓存大小
     int httpCacheSize = 10 * 1024 * 1024;
@@ -18,5 +18,10 @@ public interface C {
     //http超时时间
     long httpTimeOut = 50000L;
 
+    //用户信息
+    String USER_DB = "user_db";
 
+    String USER_ACCESS_TOKEN = "access_token";
+
+    String USER_REFRESH_TOKEN = "refresh_token";
 }
