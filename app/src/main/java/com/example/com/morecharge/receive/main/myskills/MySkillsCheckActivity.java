@@ -16,14 +16,11 @@ import com.example.com.morecharge.receive.main.myskills.entity.SkillsResponseEnt
 import com.example.com.morecharge.receive.main.myskills.skilladapter.SkillCheckAdapter;
 import com.example.com.morecharge.remote.Injection;
 import com.example.com.morecharge.ui.widget.TopBar;
-import com.example.com.morecharge.utils.GsonUtil;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -81,15 +78,11 @@ public class MySkillsCheckActivity extends BaseActivity {
                     @Override
                     public void accept(SkillsResponseEntry skillsResponseEntry) throws Exception {
 
-                        LogUtils.i(new Gson().toJson(skillsResponseEntry));
-
                         if (skillsResponseEntry != null && skillsResponseEntry.isSuccess()) {
 
                             List<SkillsResponseEntry.DataBean> skillData = skillsResponseEntry.getData();
 
                             List<SkillsResponseEntry.DataBean> haveSkills = SkillDataProcess.filterUserOwnSkills(skillData);
-
-                            LogUtils.i("==处理之后=" + GsonUtil.GsonString(haveSkills));
 
                             checkAdapter.addData(haveSkills);
                         }
