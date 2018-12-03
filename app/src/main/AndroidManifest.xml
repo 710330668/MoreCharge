@@ -78,6 +78,11 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".release.main.ui.activity.ContractPersonActivity" />
         <activity android:name=".release.main.ui.activity.ContractWorkActivity"></activity>
+        <activity android:name=".usercenter.wallet.WaterSubsidiaryActivity" />
+        <activity android:name=".usercenter.wallet.BankCardActivity" />
+        <activity android:name=".usercenter.ComplainSuggestActivity" />
+        <activity android:name=".receive.main.ReceiveOrderDetailActivity" />
+
     </application>
 
 </manifest>
