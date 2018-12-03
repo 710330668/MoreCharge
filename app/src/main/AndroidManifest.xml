@@ -78,6 +78,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="选择地址"
             android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".usercenter.wallet.WaterSubsidiaryActivity" />
+        <activity android:name=".usercenter.wallet.BankCardActivity" />
+        <activity android:name=".usercenter.ComplainSuggestActivity" />
+        <activity android:name=".receive.main.ReceiveOrderDetailActivity" />
 
     </application>
 

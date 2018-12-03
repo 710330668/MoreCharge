@@ -50,7 +50,7 @@ public class MyWalletActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.iv_back, R.id.lly_recharge,R.id.lly_withdrawal})
+    @OnClick({R.id.iv_back, R.id.lly_recharge,R.id.lly_withdrawal,R.id.lly_water_subsidiary,R.id.lly_bankcard})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
@@ -61,6 +61,12 @@ public class MyWalletActivity extends BaseActivity {
                 break;
             case R.id.lly_withdrawal:
                 startActivity(ChoosePayMethodActivity.class);
+                break;
+            case R.id.lly_water_subsidiary:
+                startActivity(WaterSubsidiaryActivity.class);
+                break;
+            case R.id.lly_bankcard:
+                startActivity(BankCardActivity.class);
                 break;
         }
     }

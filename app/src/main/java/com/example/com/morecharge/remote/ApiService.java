@@ -1,10 +1,13 @@
 package com.example.com.morecharge.remote;
 
+import com.example.com.morecharge.receive.request.ReceiveOrdersRequest;
 import com.example.com.morecharge.receive.response.LoginResponse;
+import com.example.com.morecharge.receive.response.ReceiveOrdersResponse;
 import com.example.com.morecharge.receive.response.RegisterResponse;
 import com.example.com.morecharge.receive.response.VerificationCodeResponse;
 
 import io.reactivex.Observable;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -37,9 +40,8 @@ public interface ApiService {
 
     /*******************************************接单*************************************************/
     //查询可抢单的订单
-    @FormUrlEncoded
-    @POST("viewOrderWait/query")
-    Observable<LoginResponse> getClientList(@Header("authorization") String token,@Field("longitude") String longitude, @Field("latitude") String latitude, @Field("orderBy") String orderBy, @Field("deacOrAsc") String deacOrAsc);
+    @POST("order/viewOrderWait/query")
+    Observable<ReceiveOrdersResponse> getClientList(@Header("Content-Type") String type , @Header("authorization") String token, @Body ReceiveOrdersRequest request);
 
 
 }

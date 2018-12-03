@@ -85,6 +85,7 @@ public class UserCenterReceiveFragment extends BaseFragment {
                 startActivity(MyIntegrateActivity.class);
                 break;
             case R.id.ll_complain_advice:
+                startActivity(ComplainSuggestActivity.class);
                 break;
             case R.id.ll_mine_setting:
                 startActivity(SettingActivity.class);
