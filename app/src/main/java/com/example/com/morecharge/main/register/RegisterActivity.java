@@ -13,8 +13,8 @@ import com.example.com.common.BaseActivity;
 import com.example.com.common.util.ToastUtils;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.main.login.LoginActivity;
-import com.example.com.morecharge.receive.response.RegisterResponse;
-import com.example.com.morecharge.receive.response.VerificationCodeResponse;
+import com.example.com.morecharge.main.login.response.RegisterResponse;
+import com.example.com.morecharge.main.login.response.VerificationCodeResponse;
 import com.example.com.morecharge.remote.Injection;
 
 import butterknife.BindView;

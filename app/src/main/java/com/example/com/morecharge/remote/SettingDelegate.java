@@ -21,6 +21,9 @@ public class SettingDelegate extends BaseDelegate<ItemData> {
 
     private ReceiveOrdersViewHolder.onMoreListener listener;
 
+    private ReceiveOrdersViewHolder.onDeleteListener deleteListener;
+
+    private ReceiveOrdersViewHolder.onRobOrderListener robOrderListener;
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -32,6 +35,8 @@ public class SettingDelegate extends BaseDelegate<ItemData> {
             case RECEIVE_ORDERS:
                 ReceiveOrdersViewHolder viewHolder = new ReceiveOrdersViewHolder(parent,getItemView(parent,viewType));
                 viewHolder.setOnMoreListener(listener);
+                viewHolder.setOnDeleteListener(deleteListener);
+                viewHolder.setOnRobOrderListener(robOrderListener);
                 return viewHolder;
                 default:
                     break;
@@ -61,5 +66,13 @@ public class SettingDelegate extends BaseDelegate<ItemData> {
 
     public void setOnMoreListener(ReceiveOrdersViewHolder.onMoreListener listener){
         this.listener = listener;
+    }
+
+    public void setOnDeleteListener(ReceiveOrdersViewHolder.onDeleteListener listener){
+        this.deleteListener = listener;
+    }
+
+    public void setOnRobOrderListener(ReceiveOrdersViewHolder.onRobOrderListener listener){
+        this.robOrderListener = listener;
     }
 }

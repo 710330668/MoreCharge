@@ -181,14 +181,18 @@
                 
             </LinearLayout>
             
-            <ImageView
-                android:id="@+id/img"
+            <Button
+                android:id="@+id/btn_rob_order"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="60dp"
-                android:src="@mipmap/ic_launcher"/>
+                android:background="@mipmap/bg_round"
+                android:text="抢单"
+                android:textSize="12dp"
+                android:textColor="@color/FFFFFF"
+                />
         </RelativeLayout>
 
         <View

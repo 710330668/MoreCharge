@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.response;
+package com.example.com.morecharge.main.login.response;
 
 /**
  * Created by 71033 on 2018/11/23.

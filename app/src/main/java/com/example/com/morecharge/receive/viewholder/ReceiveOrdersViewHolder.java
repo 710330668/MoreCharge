@@ -2,6 +2,7 @@ package com.example.com.morecharge.receive.viewholder;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.com.common.adapter.BaseViewHolder;
@@ -16,7 +17,13 @@ public class ReceiveOrdersViewHolder extends BaseViewHolder {
 
     private TextView tvTitle,tvLocation,tvLocationName,tvTime,tvTimeLimit,tvSalary,tvGoDetail;
 
+    private Button btnRobOrder;
+
     private onMoreListener listener;
+
+    private onDeleteListener deleteListener;
+
+    private onRobOrderListener robOrderListener ;
 
     /**
      * TODO
@@ -38,11 +45,12 @@ public class ReceiveOrdersViewHolder extends BaseViewHolder {
         tvTimeLimit = itemView.findViewById(R.id.tv_time_limit);
         tvSalary = itemView.findViewById(R.id.tv_salary);
         tvGoDetail = itemView.findViewById(R.id.tv_go_detail);
+        btnRobOrder = itemView.findViewById(R.id.btn_rob_order);
     }
 
     @Override
-    public void onBindViewHolder(Object data, final int position) {
-        ReceiveOrdersResponse.DataBean dataBean = (ReceiveOrdersResponse.DataBean) ((ItemData)data).data;
+    public void onBindViewHolder(final Object data, final int position) {
+        final ReceiveOrdersResponse.DataBean dataBean = (ReceiveOrdersResponse.DataBean) ((ItemData)data).data;
         tvTitle.setText(dataBean.getOrderInfo().getOrderTypeName());
         tvLocationName.setText(dataBean.getOrderInfo().getAddress());
         tvTime.setText(dataBean.getOrderInfo().getCreateTime());
@@ -50,18 +58,43 @@ public class ReceiveOrdersViewHolder extends BaseViewHolder {
         tvGoDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.gotoOrderDetail(position);
+                listener.gotoOrderDetail(dataBean);
+            }
+        });
+        btnRobOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                robOrderListener.robOrder(dataBean);
             }
         });
     }
 
     public interface onMoreListener{
 
-        void gotoOrderDetail(int position);
+        void gotoOrderDetail(ReceiveOrdersResponse.DataBean dataBean);
 
     }
 
+    public interface onDeleteListener{
+
+        void deleteOrder(int position);
+    }
+
+    public interface onRobOrderListener{
+
+        void robOrder(ReceiveOrdersResponse.DataBean dataBean);
+    }
+
+
     public void setOnMoreListener(onMoreListener listener){
         this.listener = listener;
+    }
+
+    public void setOnDeleteListener(onDeleteListener listener){
+        this.deleteListener = listener;
+    }
+
+    public void setOnRobOrderListener(onRobOrderListener listener){
+        this.robOrderListener = listener;
     }
 }

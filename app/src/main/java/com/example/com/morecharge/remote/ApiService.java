@@ -1,10 +1,14 @@
 package com.example.com.morecharge.remote;
 
+import com.example.com.morecharge.main.login.response.LoginResponse;
+import com.example.com.morecharge.main.login.response.RegisterResponse;
+import com.example.com.morecharge.main.login.response.VerificationCodeResponse;
+import com.example.com.morecharge.receive.request.ReceiveOrderDetailRequest;
 import com.example.com.morecharge.receive.request.ReceiveOrdersRequest;
-import com.example.com.morecharge.receive.response.LoginResponse;
+import com.example.com.morecharge.receive.request.RobOrderRequest;
+import com.example.com.morecharge.receive.response.ReceiveOrderDetailResponse;
 import com.example.com.morecharge.receive.response.ReceiveOrdersResponse;
-import com.example.com.morecharge.receive.response.RegisterResponse;
-import com.example.com.morecharge.receive.response.VerificationCodeResponse;
+import com.example.com.morecharge.receive.response.RobOrderResponse;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -43,5 +47,13 @@ public interface ApiService {
     @POST("order/viewOrderWait/query")
     Observable<ReceiveOrdersResponse> getClientList(@Header("authorization") String token, @Body ReceiveOrdersRequest request);
 
+
+    //查询可抢单的订单
+    @POST("order/viewOrderWait/orderInfo")
+    Observable<ReceiveOrderDetailResponse> getReceiveOrderDetail(@Header("authorization") String token, @Body ReceiveOrderDetailRequest request);
+
+    //抢单
+    @POST("order/common/worker/bid")
+    Observable<RobOrderResponse> robOrder(@Header("authorization") String token, @Body RobOrderRequest request);
 
 }
