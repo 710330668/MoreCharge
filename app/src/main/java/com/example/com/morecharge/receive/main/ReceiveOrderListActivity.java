@@ -116,7 +116,7 @@ public class ReceiveOrderListActivity extends BaseActivity {
         request.setLatitude("36.666502");
         request.setOrderBy("distance");
         request.setDescOrAsc("asc");
-        Injection.provideApiService().getClientList("application/json", "Bearer " + accessToken, request)
+        Injection.provideApiService().getClientList( "Bearer " + accessToken, request)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<ReceiveOrdersResponse>() {

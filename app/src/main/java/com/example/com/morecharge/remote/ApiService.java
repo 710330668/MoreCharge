@@ -41,7 +41,7 @@ public interface ApiService {
     /*******************************************接单*************************************************/
     //查询可抢单的订单
     @POST("order/viewOrderWait/query")
-    Observable<ReceiveOrdersResponse> getClientList(@Header("Content-Type") String type , @Header("authorization") String token, @Body ReceiveOrdersRequest request);
+    Observable<ReceiveOrdersResponse> getClientList(@Header("authorization") String token, @Body ReceiveOrdersRequest request);
 
 
 }
