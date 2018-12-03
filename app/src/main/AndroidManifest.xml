@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.com.morecharge">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".receive.main.scan.ScanRecordActivity">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a8461e0ede101ac29b84c4d654a5e24e" />
+
+        <activity android:name=".release.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -74,6 +79,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="选择地址"
             android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".usercenter.wallet.WaterSubsidiaryActivity" />
+        <activity android:name=".usercenter.wallet.BankCardActivity" />
+        <activity android:name=".usercenter.ComplainSuggestActivity" />
+        <activity android:name=".receive.main.ReceiveOrderDetailActivity" />
         <activity
             android:name=".receive.main.myskills.MySkillsAddActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

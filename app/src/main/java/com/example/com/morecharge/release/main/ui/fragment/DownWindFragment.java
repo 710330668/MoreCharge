@@ -26,6 +26,7 @@ import com.amap.api.maps2d.model.MyLocationStyle;
 import com.example.com.common.BaseFragment;
 import com.example.com.morecharge.R;
 import com.example.com.morecharge.release.main.ui.activity.BuySubBillingRuleActivity;
+import com.example.com.morecharge.view.GoodPropertyDiaolog;
 import com.example.com.morecharge.view.SelectInsuranceDialog;
 import com.example.com.morecharge.view.SelectPickTimeDialog;
 
@@ -97,7 +98,8 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
     }
 
 
-    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery, R.id.tv_cost, R.id.tv_recommend_cost, R.id.tv_good_insurance, R.id.tv_good_insurance_2, R.id.tv_pick_time, R.id.tv_immediately_pick})
+    @OnClick({R.id.rb_buy_on_sub, R.id.rb_take_delivery, R.id.tv_cost, R.id.tv_recommend_cost, R.id.tv_good_insurance, R.id.tv_good_insurance_2, R.id.tv_pick_time, R.id.tv_immediately_pick
+    ,R.id.tv_good_property,R.id.tv_good_property_weightt})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_buy_on_sub:
@@ -122,7 +124,32 @@ public class DownWindFragment extends BaseFragment implements LocationSource, AM
             case R.id.tv_immediately_pick:
                 showSelectTimeDialog();
                 break;
+            case R.id.tv_good_property_weightt:
+            case R.id.tv_good_property:
+                showGoodPropertyDialog();
+                break;
         }
+    }
+
+    private void showGoodPropertyDialog() {
+        final GoodPropertyDiaolog.Builder builder = new GoodPropertyDiaolog.Builder(getContext());
+        GoodPropertyDiaolog dialog = builder.setNavigationButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).setPositionButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.dismiss();
+            }
+        }).createDialog();
+
+        Window window = dialog.getWindow();
+        window.setGravity(Gravity.BOTTOM);
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        window.setWindowAnimations(R.style.dialog_animation);
+        dialog.show();
     }
 
     private void showSelectTimeDialog() {

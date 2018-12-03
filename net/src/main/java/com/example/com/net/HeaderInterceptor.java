@@ -38,6 +38,7 @@ public class HeaderInterceptor implements Interceptor {
         for(String s : headers1.names()){
             headers.put(s,headers1.get(s));
         }
+        headers.put("Content-Type","application/json");
         return Headers.of(headers);
     }
 

@@ -159,6 +159,7 @@
             android:background="@color/F4F4F4"/>
 
         <LinearLayout
+            android:id="@+id/lly_bankcard"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:orientation="horizontal">
@@ -186,6 +187,7 @@
 
 
         <LinearLayout
+            android:id="@+id/lly_water_subsidiary"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:orientation="horizontal">

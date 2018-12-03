@@ -6,7 +6,9 @@ import com.example.com.common.adapter.BaseDelegate;
 import com.example.com.common.adapter.BaseViewHolder;
 import com.example.com.common.adapter.ItemData;
 import com.example.com.morecharge.R;
+import com.example.com.morecharge.receive.viewholder.ReceiveOrdersViewHolder;
 import com.example.com.morecharge.receive.viewholder.SortCommonViewHolder;
+import com.example.com.morecharge.release.viewholder.GoodPropertyViewHolder;
 
 /**
  * Created by 71033 on 2018/11/16.
@@ -14,13 +16,28 @@ import com.example.com.morecharge.receive.viewholder.SortCommonViewHolder;
 public class SettingDelegate extends BaseDelegate<ItemData> {
 
     public static final int SORT_COMMON_STATUS = 0;
+    public static final int RELEASE_GOOD_PROPERTY = 1;
+    public static final int RECEIVE_ORDERS = 2;
 
+    private ReceiveOrdersViewHolder.onMoreListener listener;
+
+    private ReceiveOrdersViewHolder.onDeleteListener deleteListener;
+
+    private ReceiveOrdersViewHolder.onRobOrderListener robOrderListener;
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType){
             case SORT_COMMON_STATUS:
                 return new SortCommonViewHolder(parent,getItemView(parent,viewType));
+            case RELEASE_GOOD_PROPERTY:
+                return new GoodPropertyViewHolder(parent,getItemView(parent,viewType));
+            case RECEIVE_ORDERS:
+                ReceiveOrdersViewHolder viewHolder = new ReceiveOrdersViewHolder(parent,getItemView(parent,viewType));
+                viewHolder.setOnMoreListener(listener);
+                viewHolder.setOnDeleteListener(deleteListener);
+                viewHolder.setOnRobOrderListener(robOrderListener);
+                return viewHolder;
                 default:
                     break;
         }
@@ -37,8 +54,25 @@ public class SettingDelegate extends BaseDelegate<ItemData> {
         switch (viewType){
             case SORT_COMMON_STATUS:
                 return R.layout.item_sort_common;
+            case RELEASE_GOOD_PROPERTY:
+                return R.layout.item_good_property;
+            case RECEIVE_ORDERS:
+                return R.layout.item_receive_order;
                 default:
         }
         return 0;
+    }
+
+
+    public void setOnMoreListener(ReceiveOrdersViewHolder.onMoreListener listener){
+        this.listener = listener;
+    }
+
+    public void setOnDeleteListener(ReceiveOrdersViewHolder.onDeleteListener listener){
+        this.deleteListener = listener;
+    }
+
+    public void setOnRobOrderListener(ReceiveOrdersViewHolder.onRobOrderListener listener){
+        this.robOrderListener = listener;
     }
 }
