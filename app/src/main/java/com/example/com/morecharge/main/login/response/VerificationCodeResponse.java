@@ -1,22 +1,22 @@
-package com.example.com.morecharge.receive.response;
+package com.example.com.morecharge.main.login.response;
 
 /**
  * Created by 71033 on 2018/11/26.
  */
-public class RegisterResponse {
+public class VerificationCodeResponse {
 
 
     /**
-     * success : false
-     * msg : Request method 'GET' not supported
+     * success : true
+     * msg : null
      * code : 0
-     * data : null
+     * data : b6165fc0a40c45e5ba8fa3950986fb2e
      */
 
     private boolean success;
-    private String msg;
+    private Object msg;
     private int code;
-    private Object data;
+    private String data;
 
     public boolean isSuccess() {
         return success;
@@ -26,11 +26,11 @@ public class RegisterResponse {
         this.success = success;
     }
 
-    public String getMsg() {
+    public Object getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public void setMsg(Object msg) {
         this.msg = msg;
     }
 
@@ -42,11 +42,11 @@ public class RegisterResponse {
         this.code = code;
     }
 
-    public Object getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(String data) {
         this.data = data;
     }
 }

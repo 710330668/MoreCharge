@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by 71033 on 2018/11/30.
  */
-public class ReceiveOrdersResponse {
+public class ReceiveOrdersResponse implements Serializable{
 
 
     /**
@@ -98,7 +98,7 @@ public class ReceiveOrdersResponse {
             this.orderInfo = orderInfo;
         }
 
-        public static class OrderInfoBean {
+        public static class OrderInfoBean implements Serializable{
             /**
              * id : 1056001183498625025
              * createBy : 140

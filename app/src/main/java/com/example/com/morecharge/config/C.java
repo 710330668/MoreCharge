@@ -10,7 +10,7 @@ public interface C {
 
 
     //测试
-    String TEST_BASE_URL = "http://api.huoduoduo360.com/";
+    String TEST_BASE_URL = "https://api.huoduoduo360.com";
 
     //http缓存大小
     int httpCacheSize = 10 * 1024 * 1024;

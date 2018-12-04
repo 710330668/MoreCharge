@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import com.example.com.common.BaseFragment;
 import com.example.com.common.util.ToastUtils;
 import com.example.com.morecharge.R;
-import com.example.com.morecharge.receive.response.VerificationCodeResponse;
+import com.example.com.morecharge.main.login.response.VerificationCodeResponse;
 import com.example.com.morecharge.remote.Injection;
 
 import butterknife.BindView;
