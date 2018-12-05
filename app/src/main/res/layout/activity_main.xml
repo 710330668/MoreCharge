@@ -69,7 +69,7 @@
         app:tabSelectedTextColor="#FFFD8B06"
         app:tabTextColor="#FF666666" />
 
-    <com.example.com.morecharge.view.CustomViewPager
+    <com.example.hdd.morecharge.view.CustomViewPager
         android:id="@+id/tab_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"

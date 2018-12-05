@@ -56,7 +56,7 @@
             android:textSize="@dimen/font_normal_size" />
 
 
-        <com.example.com.morecharge.receive.main.goodsdetail.widget.AmountView
+        <com.example.hdd.morecharge.receive.main.goodsdetail.widget.AmountView
             android:id="@+id/goods_bottom_amount_view"
             android:layout_width="wrap_content"
             android:layout_height="36dp"

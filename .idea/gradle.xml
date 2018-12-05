@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/net" />
+            <option value="$PROJECT_DIR$/ocr_ui" />
             <option value="$PROJECT_DIR$/zxinglib" />
           </set>
         </option>

@@ -81,7 +81,7 @@
                     android:layout_weight="1"
                     android:background="#CFCFCF" />
 
-                <com.example.com.morecharge.view.MyRatingBar
+                <com.example.hdd.morecharge.view.MyRatingBar
                     android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                 android:layout_gravity="center"
                 />
 
-            <com.example.com.morecharge.view.MyRatingBar
+            <com.example.hdd.morecharge.view.MyRatingBar
                 android:id="@+id/ratingBar_quality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                 android:layout_gravity="center"
                 />
 
-            <com.example.com.morecharge.view.MyRatingBar
+            <com.example.hdd.morecharge.view.MyRatingBar
                 android:id="@+id/ratingBar_attitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
                 android:layout_gravity="center"
                 />
 
-            <com.example.com.morecharge.view.MyRatingBar
+            <com.example.hdd.morecharge.view.MyRatingBar
                 android:id="@+id/ratingBar_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

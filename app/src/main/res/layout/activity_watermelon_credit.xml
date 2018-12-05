@@ -35,7 +35,7 @@
             android:layout_height="240dp"
             android:background="@color/FF9A2E">
 
-            <com.example.com.morecharge.view.DashboardView
+            <com.example.hdd.morecharge.view.DashboardView
                 android:id="@+id/dashboardView"
                 android:layout_width="250dp"
                 android:layout_height="140dp"

@@ -38,7 +38,7 @@
             android:layout_height="45dp"
             android:orientation="horizontal">
 
-            <com.example.com.morecharge.view.DrawableCenterRadioButton
+            <com.example.hdd.morecharge.view.DrawableCenterRadioButton
                 android:id="@+id/rb_all"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -53,7 +53,7 @@
                 android:layout_height="match_parent"
                 android:background="#F4F4F4" />
 
-            <com.example.com.morecharge.view.DrawableCenterRadioButton
+            <com.example.hdd.morecharge.view.DrawableCenterRadioButton
                 android:id="@+id/rb_time"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -68,7 +68,7 @@
                 android:layout_height="match_parent"
                 android:background="#F4F4F4" />
 
-            <com.example.com.morecharge.view.DrawableCenterRadioButton
+            <com.example.hdd.morecharge.view.DrawableCenterRadioButton
                 android:id="@+id/rb_car_price"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -83,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:background="#F4F4F4" />
 
-            <com.example.com.morecharge.view.DrawableCenterRadioButton
+            <com.example.hdd.morecharge.view.DrawableCenterRadioButton
                 android:id="@+id/rb_distance"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

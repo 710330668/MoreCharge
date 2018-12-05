@@ -195,17 +195,17 @@
                 android:layout_marginRight="15dp"
                 android:background="#F0F0F0"/>
 
-            <com.example.com.morecharge.view.CustomViewPager
+            <com.example.hdd.morecharge.view.CustomViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp">
 
-            </com.example.com.morecharge.view.CustomViewPager>
+            </com.example.hdd.morecharge.view.CustomViewPager>
 
         </LinearLayout>
 
-        <com.example.com.morecharge.view.MyImageView
+        <com.example.hdd.morecharge.view.MyImageView
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@mipmap/ic_launcher"
