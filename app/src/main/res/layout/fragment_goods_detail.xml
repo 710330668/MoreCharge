@@ -1,0 +1,26 @@
+<com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/oneScrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/goods_detail_iv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:id="@+id/goods_detail_large_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/large_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:layout_height="match_parent" />-->
+
+
+    </LinearLayout>
+</com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView>
