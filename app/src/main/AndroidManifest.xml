@@ -99,6 +99,7 @@
             android:label="查看技能详情" />
         <activity android:name=".usercenter.MyReceiveOrdersActivity" />
         <activity android:name=".receive.main.ReceiveAppraiseActivity" />
+        <activity android:name=".usercenter.auth.DetectActivity" />
 
     </application>
 
