@@ -47,6 +47,8 @@
         //控件是否可以点击
         <attr name="starClickable" format="boolean"></attr>
 
+        <attr name="flag" format="string"></attr>
+
     </declare-styleable>
 
     <declare-styleable name="CircleImageView">

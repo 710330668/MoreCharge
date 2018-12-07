@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.com.morecharge.ui.widget.TopBar
+    <com.example.hdd.morecharge.ui.widget.TopBar
         android:id="@+id/goods_detail_topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:rightTextColor="@android:color/white" />
 
 
-    <com.example.com.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore
+    <com.example.hdd.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore
         android:id="@+id/goods_detail_ptlm"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +26,7 @@
         android:layout_below="@+id/goods_detail_topbar"
         android:orientation="vertical">
 
-        <com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView
+        <com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -121,9 +121,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-        </com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView>
+        </com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView>
 
-        <com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView
+        <com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -153,9 +153,9 @@
 
             </LinearLayout>
 
-        </com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView>
+        </com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView>
 
-    </com.example.com.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore>
+    </com.example.hdd.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore>
 
 
     <Button

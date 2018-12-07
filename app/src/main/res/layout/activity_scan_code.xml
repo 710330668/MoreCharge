@@ -21,7 +21,7 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
-        <com.example.com.morecharge.ui.widget.TopBar
+        <com.example.hdd.morecharge.ui.widget.TopBar
             android:id="@+id/scan_code_topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
