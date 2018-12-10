@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.goodsdetail;
+package com.example.hdd.morecharge.receive.main.goodsdetail;
 
 import android.content.Context;
 import android.util.AttributeSet;

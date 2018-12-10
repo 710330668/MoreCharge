@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.integrate.listener;
+package com.example.hdd.morecharge.receive.main.integrate.listener;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;

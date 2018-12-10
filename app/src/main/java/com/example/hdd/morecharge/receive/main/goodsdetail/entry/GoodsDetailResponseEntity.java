@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.goodsdetail.entry;
+package com.example.hdd.morecharge.receive.main.goodsdetail.entry;
 
 import java.util.List;
 

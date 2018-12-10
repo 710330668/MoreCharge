@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.goodsdetail.goodsdetailpage;
+package com.example.hdd.morecharge.receive.main.goodsdetail.goodsdetailpage;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.com.morecharge.R;
+import com.example.hdd.morecharge.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

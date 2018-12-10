@@ -1,13 +1,10 @@
 package com.example.hdd.morecharge.receive.main.integrate.integrateadapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,22 +13,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.example.hdd.common.adapter.BaseAdapter;
-import com.example.hdd.common.adapter.BaseDelegate;
-import com.example.hdd.common.adapter.onItemClickListener;
-import com.example.hdd.morecharge.receive.main.integrate.entity.IntegrateEntity;
 
-import com.example.com.common.util.LogUtils;
-import com.example.com.common.util.ToastUtils;
-import com.example.com.imageloader.LoaderManager;
-import com.example.com.morecharge.R;
-import com.example.com.morecharge.receive.main.goodsdetail.GoodsDetailActivity;
-import com.example.com.morecharge.receive.main.goodsdetail.GoodsToPayActivity;
-import com.example.com.morecharge.receive.main.goodsdetail.widget.AmountView;
-import com.example.com.morecharge.receive.main.integrate.MyIntegrateActivity;
-import com.example.com.morecharge.receive.main.integrate.entity.IntegGoodsListResponse;
-import com.example.com.morecharge.receive.main.myskills.TempConstant;
-import com.example.com.morecharge.utils.GsonUtil;
+import com.example.hdd.common.util.ToastUtils;
+import com.example.hdd.imageloader.LoaderManager;
+import com.example.hdd.morecharge.R;
+import com.example.hdd.morecharge.receive.main.goodsdetail.GoodsDetailActivity;
+import com.example.hdd.morecharge.receive.main.integrate.MyIntegrateActivity;
+import com.example.hdd.morecharge.receive.main.integrate.entity.IntegGoodsListResponse;
+import com.example.hdd.morecharge.receive.main.myskills.TempConstant;
 
 import java.math.BigDecimal;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.goodsdetail.goodsdetailpage;
+package com.example.hdd.morecharge.receive.main.goodsdetail.goodsdetailpage;
 
 import android.graphics.PointF;
 import android.net.Uri;
@@ -17,9 +17,9 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.ImageViewState;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
-import com.example.com.morecharge.R;
-import com.example.com.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore;
-import com.example.com.morecharge.receive.main.goodsdetail.GoodsScrollView;
+import com.example.hdd.morecharge.R;
+import com.example.hdd.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore;
+import com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView;
 
 import java.io.File;
 

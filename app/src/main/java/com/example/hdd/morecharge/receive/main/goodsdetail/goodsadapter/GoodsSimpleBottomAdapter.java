@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.goodsdetail.goodsadapter;
+package com.example.hdd.morecharge.receive.main.goodsdetail.goodsadapter;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

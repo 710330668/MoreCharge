@@ -1,4 +1,4 @@
-package com.example.com.morecharge.receive.main.integrate.entity;
+package com.example.hdd.morecharge.receive.main.integrate.entity;
 
 public class IntegrateExchangeGoodsEntity {
 

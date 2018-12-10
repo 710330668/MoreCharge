@@ -9,21 +9,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.com.common.BaseActivity;
-import com.example.com.common.util.LogUtils;
-import com.example.com.imageloader.LoaderManager;
-import com.example.com.morecharge.R;
-import com.example.com.morecharge.receive.main.address.AddressListActivity;
-import com.example.com.morecharge.receive.main.integrate.entity.InteGoodsInfoEntity;
-import com.example.com.morecharge.ui.widget.TopBar;
-import com.example.com.morecharge.utils.GsonUtil;
+import com.example.hdd.common.BaseActivity;
+import com.example.hdd.common.util.LogUtils;
+import com.example.hdd.imageloader.LoaderManager;
+import com.example.hdd.morecharge.R;
+import com.example.hdd.morecharge.receive.main.address.AddressListActivity;
+import com.example.hdd.morecharge.receive.main.integrate.entity.InteGoodsInfoEntity;
+import com.example.hdd.morecharge.ui.widget.TopBar;
+import com.example.hdd.morecharge.utils.GsonUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-import com.example.hdd.common.BaseActivity;
-import com.example.hdd.morecharge.R;
-import com.example.hdd.morecharge.ui.widget.TopBar;
 
 import butterknife.BindView;
 import butterknife.OnClick;
