@@ -15,12 +15,10 @@ import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.LocationSource;
 import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.model.MyLocationStyle;
-import com.example.com.common.BaseFragment;
-import com.example.com.morecharge.R;
-import com.example.com.morecharge.release.main.ui.activity.ContractPersonActivity;
-import com.example.com.morecharge.release.main.ui.activity.ContractWorkActivity;
 import com.example.hdd.common.BaseFragment;
 import com.example.hdd.morecharge.R;
+import com.example.hdd.morecharge.release.main.ui.activity.ContractPersonActivity;
+import com.example.hdd.morecharge.release.main.ui.activity.ContractWorkActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
