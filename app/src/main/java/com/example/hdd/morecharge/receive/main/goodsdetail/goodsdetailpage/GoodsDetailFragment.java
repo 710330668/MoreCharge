@@ -1,7 +1,5 @@
 package com.example.hdd.morecharge.receive.main.goodsdetail.goodsdetailpage;
 
-import android.graphics.PointF;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,17 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.davemorrissey.labs.subscaleview.ImageSource;
-import com.davemorrissey.labs.subscaleview.ImageViewState;
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import com.example.hdd.morecharge.R;
-import com.example.hdd.morecharge.receive.main.goodsdetail.GoodsPullUpToLoadMore;
 import com.example.hdd.morecharge.receive.main.goodsdetail.GoodsScrollView;
-
-import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,8 +18,8 @@ import butterknife.Unbinder;
 
 public class GoodsDetailFragment extends Fragment {
 
-    @BindView(R.id.goods_detail_large_iv)
-    SubsamplingScaleImageView goodsDetailLargeIv;
+//    @BindView(R.id.goods_detail_large_iv)
+//    SubsamplingScaleImageView goodsDetailLargeIv;
 
     @BindView(R.id.goods_detail_iv_container)
     LinearLayout goodsDetailIvContainer;
@@ -59,26 +48,26 @@ public class GoodsDetailFragment extends Fragment {
     }
 
     private void initLargeIv() {
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-
-            String picUrl = bundle.getString("picUrl");
-            goodsDetailLargeIv.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
-            goodsDetailLargeIv.setMinScale(1.0f);
-            goodsDetailLargeIv.setZoomEnabled(false);
-
-//        下载图片保存到本地
-            Glide.with(this).load(picUrl).downloadOnly(new SimpleTarget<File>() {
-                @Override
-                public void onResourceReady(File resource, GlideAnimation<? super File> glideAnimation) {
-                    // 将保存的图片地址给SubsamplingScaleImageView,这里注意设置ImageViewState设置初始显示比例
-                    goodsDetailLargeIv.setImage(ImageSource.uri(Uri.fromFile(resource)), new ImageViewState(1.5F, new PointF(0, 0), 0));
-
-                }
-            });
-
-
-        }
+//        Bundle bundle = getArguments();
+//        if (bundle != null) {
+//
+//            String picUrl = bundle.getString("picUrl");
+//            goodsDetailLargeIv.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
+//            goodsDetailLargeIv.setMinScale(1.0f);
+//            goodsDetailLargeIv.setZoomEnabled(false);
+//
+////        下载图片保存到本地
+//            Glide.with(this).load(picUrl).downloadOnly(new SimpleTarget<File>() {
+//                @Override
+//                public void onResourceReady(File resource, GlideAnimation<? super File> glideAnimation) {
+//                    // 将保存的图片地址给SubsamplingScaleImageView,这里注意设置ImageViewState设置初始显示比例
+//                    goodsDetailLargeIv.setImage(ImageSource.uri(Uri.fromFile(resource)), new ImageViewState(1.5F, new PointF(0, 0), 0));
+//
+//                }
+//            });
+//
+//
+//        }
 
     }
 
@@ -98,11 +87,11 @@ public class GoodsDetailFragment extends Fragment {
             @Override
             public void onScroll(int scrollY) {
 
-                if (scrollY == 0) {
-                    GoodsPullUpToLoadMore.isTop = true;
-                } else {
-                    GoodsPullUpToLoadMore.isTop = false;
-                }
+//                if (scrollY == 0) {
+//                    GoodsPullUpToLoadMore.isTop = true;
+//                } else {
+//                    GoodsPullUpToLoadMore.isTop = false;
+//                }
             }
 
             @Override
