@@ -1,13 +1,493 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <TextView
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/a_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="建筑工地" />
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="11dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="5dp">
 
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RadioButton
+                    android:id="@+id/rb_pack_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_down_wing_button"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
+                    android:paddingTop="13dp"
+                    android:text="清洗家用电器"
+                    android:textColor="@drawable/bg_down_wind_tc"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/rb_pack_work"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rb_pack_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_down_wing_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
+                    android:paddingTop="13dp"
+                    android:text="打扫卫生"
+                    android:textColor="@drawable/bg_down_wind_tc"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@+id/rb_pack_person"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rb_pack_person" />
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cos_pack_person_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintTop_toBottomOf="@+id/rb_pack_person">
+
+                    <TextView
+                        android:id="@+id/tv_person_project_positon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="工作位置"
+                        android:textColor="#666666"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <EditText
+                        android:id="@+id/et_work_position"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_empty"
+                        android:hint="请填写您的地址"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_person_project_positon"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_person_project_positon"
+                        app:layout_constraintRight_toLeftOf="@+id/im_voice"
+                        app:layout_constraintTop_toTopOf="@+id/tv_person_project_positon" />
+
+                    <ImageView
+                        android:id="@+id/im_voice"
+                        android:layout_width="11dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="21dp"
+                        android:src="@mipmap/voice"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_person_project_positon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_person_project_positon" />
+
+                    <View
+                        android:id="@+id/view_line_person_1"
+                        android:layout_width="match_parent"
+                        android:background="#F4F4F4"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_person_project_positon" />
+
+                    <TextView
+                        android:id="@+id/tv_work_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工期"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_2"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_1" />
+
+                    <View
+                        android:id="@+id/rect_start_date"
+                        android:layout_width="105dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rectangle_gray_line"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_2"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_work_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_1" />
+
+                    <ImageView
+                        android:id="@+id/iv_start_date"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_date"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_start_date"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/rect_start_date" />
+
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_start_date"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_start_date"
+                        app:layout_constraintRight_toRightOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/rect_start_date" />
+
+                    <TextView
+                        android:layout_width="13dp"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#666666"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_2"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_1" />
+
+                    <View
+                        android:id="@+id/rect_end_date"
+                        android:layout_width="105dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="33dp"
+                        android:background="@drawable/rectangle_gray_line"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_2"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_1" />
+
+                    <ImageView
+                        android:id="@+id/iv_end_date"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_date"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_start_date"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_end_date"
+                        app:layout_constraintTop_toTopOf="@+id/rect_start_date" />
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_end_date"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_end_date"
+                        app:layout_constraintRight_toRightOf="@+id/rect_end_date"
+                        app:layout_constraintTop_toTopOf="@+id/rect_end_date" />
+
+                    <TextView
+                        android:id="@+id/tv_total_days"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="13dp"
+                        android:gravity="end"
+                        android:text="共   天"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_end_date"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_end_date"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rect_end_date" />
+
+                    <View
+                        android:id="@+id/view_line_person_2"
+                        android:background="#F4F4F4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="55dp"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工时"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_3"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_work_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_2" />
+
+                    <View
+                        android:id="@+id/rect_start_hour"
+                        android:layout_width="105dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/rectangle_gray_line"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_3"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_2" />
+
+                    <ImageView
+                        android:id="@+id/iv_start_hour"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_date"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_start_hour"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_start_hour"
+                        app:layout_constraintTop_toTopOf="@+id/rect_start_hour" />
+
+                    <TextView
+                        android:id="@+id/tv_start_hour"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_start_hour"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_start_hour"
+                        app:layout_constraintRight_toRightOf="@+id/rect_start_hour"
+                        app:layout_constraintTop_toTopOf="@+id/rect_start_hour" />
+
+                    <TextView
+                        android:layout_width="13dp"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#666666"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_3"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_2" />
+
+                    <View
+                        android:id="@+id/rect_end_hour"
+                        android:layout_width="105dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="33dp"
+                        android:background="@drawable/rectangle_gray_line"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_3"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_start_date"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_2" />
+
+                    <ImageView
+                        android:id="@+id/iv_end_hour"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_date"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_end_hour"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_end_hour"
+                        app:layout_constraintTop_toTopOf="@+id/rect_end_hour" />
+
+                    <TextView
+                        android:id="@+id/tv_end_hour"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_end_hour"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_end_hour"
+                        app:layout_constraintRight_toRightOf="@+id/rect_end_hour"
+                        app:layout_constraintTop_toTopOf="@+id/rect_end_hour" />
+
+                    <TextView
+                        android:id="@+id/tv_total_hours"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="13dp"
+                        android:gravity="end"
+                        android:text="共   小时"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/rect_end_hour"
+                        app:layout_constraintLeft_toRightOf="@+id/rect_end_hour"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rect_end_hour" />
+
+                    <View
+                        android:id="@+id/view_line_person_3"
+                        android:background="#F4F4F4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="55dp"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日薪"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_4"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_3" />
+
+                    <EditText
+                        android:id="@+id/et_day_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_empty"
+                        android:hint="请输入日薪"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_line_person_4"
+                        app:layout_constraintLeft_toLeftOf="@+id/rect_start_hour"
+                        app:layout_constraintTop_toTopOf="@+id/view_line_person_3" />
+
+                    <View
+                        android:id="@+id/view_line_person_4"
+                        android:layout_width="match_parent"
+                        android:background="#F4F4F4"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="43dp"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_3" />
+
+                    <TextView
+                        android:id="@+id/tv_work_describe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="描述"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_4" />
+
+                    <EditText
+                        android:id="@+id/et_work_description"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_empty"
+                        android:gravity="left|top"
+                        android:hint="请具体描述您要做什么"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_line_person_5"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_work_describe"
+                        app:layout_constraintRight_toRightOf="@+id/tv_total_days"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_work_describe" />
+
+                    <View
+                        android:id="@+id/view_line_person_5"
+                        android:layout_width="match_parent"
+                        android:background="#F4F4F4"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="93dp"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_4" />
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/tv_upload_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传照片或视频"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_5" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcl_upload_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintRight_toRightOf="@+id/tv_total_hours"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_upload_photo" />
+
+                    <View
+                        android:id="@+id/view_line_person_6"
+                        android:layout_width="match_parent"
+                        android:background="#F4F4F4"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@+id/rcl_upload_photo" />
+
+
+                    <TextView
+                        android:id="@+id/tv_voice_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="语音描述"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_person_project_positon"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_6" />
+
+                    <View
+                        android:id="@+id/view_line_person_7"
+                        android:layout_width="match_parent"
+                        android:background="#F4F4F4"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_voice_description" />
+
+                    <TextView
+                        android:id="@+id/tv_person_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/bg_user_center_button"
+                        android:gravity="center"
+                        android:text="立即下单"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_line_person_7" />
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+
+    </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

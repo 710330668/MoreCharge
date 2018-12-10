@@ -2,19 +2,11 @@ package com.example.hdd.morecharge.view;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 
 import com.example.hdd.morecharge.R;
 
@@ -74,6 +66,7 @@ public class SelectPickTimeDialog extends Dialog {
                     weekWheel.setSeletion(selectedIndex - 2);
                 }
             });
+            dateWheel.setSeletion(0);
 
             weekWheel = (WheelView) layout.findViewById(R.id.week_wheel);
             weekWheel.setOffset(2);
@@ -84,14 +77,17 @@ public class SelectPickTimeDialog extends Dialog {
                     dateWheel.setSeletion(selectedIndex - 2);
                 }
             });
+            weekWheel.setSeletion(0);
 
             hourWheel = (WheelView) layout.findViewById(R.id.hour_wheel);
             hourWheel.setOffset(2);
             hourWheel.setItems(hourData);
+            hourWheel.setSeletion(0);
 
             minuteWheel = (WheelView) layout.findViewById(R.id.minute_wheel);
             minuteWheel.setOffset(2);
             minuteWheel.setItems(minuteData);
+            minuteWheel.setSeletion(0);
 
             layout.findViewById(R.id.tv_pick_immediately).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -134,6 +130,15 @@ public class SelectPickTimeDialog extends Dialog {
         public Builder setNavigationButton(View.OnClickListener listener) {
             this.navigationButtonClickListener = listener;
             return this;
+        }
+
+        public String getSelectTime() {
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DATE, dateWheel.getSeletedIndex());
+            calendar.set(Calendar.HOUR_OF_DAY, hourWheel.getSeletedIndex());
+            calendar.set(Calendar.MINUTE, minuteWheel.getSeletedIndex());
+            String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime());
+            return format;
         }
 
         public SelectPickTimeDialog createDialog() {

@@ -26,6 +26,10 @@ public interface C {
     String USER_REFRESH_TOKEN = "refresh_token";
 
 
+    //
+    String CHOOSE_ADDRESS = "choose_address";
+
+
 
 
 }

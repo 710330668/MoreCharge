@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".release.main.ui.activity.ContractWorkActivity">
+    tools:context=".release.main.ui.activity.ContractProjectActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -358,6 +358,7 @@
                 android:layout_height="127dp"/>
 
             <TextView
+                android:id="@+id/tv_order_build_work"
                 android:gravity="center"
                 android:text="点击发布"
                 android:textColor="#ffffffff"

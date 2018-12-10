@@ -1,9 +1,10 @@
-package com.example.com.morecharge.release.main.ui.activity;
+package com.example.hdd.morecharge.release.main.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.com.morecharge.R;
+import com.example.hdd.morecharge.R;
+
 
 public class ContractWorkActivity extends AppCompatActivity {
 

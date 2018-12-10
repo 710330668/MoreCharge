@@ -41,29 +41,29 @@ public class TimeUtils {
      * 被解释为模式字母，用来表示日期或时间字符串元素。文本可以使用单引号 (') 引起来，以免进行解释。"''"
      * 表示单引号。所有其他字符均不解释；只是在格式化时将它们简单复制到输出字符串，或者在分析时与输入字符串进行匹配。
      * 定义了以下模式字母（所有其他字符 'A' 到 'Z' 和 'a' 到 'z' 都被保留）：
-     *                          HH:mm    15:44
-     *                         h:mm a    3:44 下午
-     *                        HH:mm z    15:44 CST
-     *                        HH:mm Z    15:44 +0800
-     *                     HH:mm zzzz    15:44 中国标准时间
-     *                       HH:mm:ss    15:44:40
-     *                     yyyy-MM-dd    2016-08-12
-     *               yyyy-MM-dd HH:mm    2016-08-12 15:44
-     *            yyyy-MM-dd HH:mm:ss    2016-08-12 15:44:40
-     *       yyyy-MM-dd HH:mm:ss zzzz    2016-08-12 15:44:40 中国标准时间
-     *  EEEE yyyy-MM-dd HH:mm:ss zzzz    星期五 2016-08-12 15:44:40 中国标准时间
-     *       yyyy-MM-dd HH:mm:ss.SSSZ    2016-08-12 15:44:40.461+0800
-     *     yyyy-MM-dd'T'HH:mm:ss.SSSZ    2016-08-12T15:44:40.461+0800
-     *   yyyy.MM.dd G 'at' HH:mm:ss z    2016.08.12 公元 at 15:44:40 CST
-     *                         K:mm a    3:44 下午
-     *               EEE, MMM d, ''yy    星期五, 八月 12, '16
-     *          hh 'o''clock' a, zzzz    03 o'clock 下午, 中国标准时间
-     *   yyyyy.MMMMM.dd GGG hh:mm aaa    02016.八月.12 公元 03:44 下午
-     *     EEE, d MMM yyyy HH:mm:ss Z    星期五, 12 八月 2016 15:44:40 +0800
-     *                  yyMMddHHmmssZ    160812154440+0800
-     *     yyyy-MM-dd'T'HH:mm:ss.SSSZ    2016-08-12T15:44:40.461+0800
+     * HH:mm    15:44
+     * h:mm a    3:44 下午
+     * HH:mm z    15:44 CST
+     * HH:mm Z    15:44 +0800
+     * HH:mm zzzz    15:44 中国标准时间
+     * HH:mm:ss    15:44:40
+     * yyyy-MM-dd    2016-08-12
+     * yyyy-MM-dd HH:mm    2016-08-12 15:44
+     * yyyy-MM-dd HH:mm:ss    2016-08-12 15:44:40
+     * yyyy-MM-dd HH:mm:ss zzzz    2016-08-12 15:44:40 中国标准时间
+     * EEEE yyyy-MM-dd HH:mm:ss zzzz    星期五 2016-08-12 15:44:40 中国标准时间
+     * yyyy-MM-dd HH:mm:ss.SSSZ    2016-08-12 15:44:40.461+0800
+     * yyyy-MM-dd'T'HH:mm:ss.SSSZ    2016-08-12T15:44:40.461+0800
+     * yyyy.MM.dd G 'at' HH:mm:ss z    2016.08.12 公元 at 15:44:40 CST
+     * K:mm a    3:44 下午
+     * EEE, MMM d, ''yy    星期五, 八月 12, '16
+     * hh 'o''clock' a, zzzz    03 o'clock 下午, 中国标准时间
+     * yyyyy.MMMMM.dd GGG hh:mm aaa    02016.八月.12 公元 03:44 下午
+     * EEE, d MMM yyyy HH:mm:ss Z    星期五, 12 八月 2016 15:44:40 +0800
+     * yyMMddHHmmssZ    160812154440+0800
+     * yyyy-MM-dd'T'HH:mm:ss.SSSZ    2016-08-12T15:44:40.461+0800
      * EEEE 'DATE('yyyy-MM-dd')' 'TIME('HH:mm:ss')' zzzz    星期五 DATE(2016-08-12) TIME(15:44:40) 中国标准时间
-     *
+     * <p>
      * 注意：SimpleDateFormat不是线程安全的，线程安全需用{@code ThreadLocal<SimpleDateFormat>}
      */
     public static final String DEFAULT_PATTERN = "yyyy-MM-dd";
@@ -589,8 +589,9 @@ public class TimeUtils {
 
     /**
      * 获取友好型与当前时间的差
+     * <p>
+     * //     * @param millis 毫秒时间戳
      *
-//     * @param millis 毫秒时间戳
      * @return 友好型与当前时间的差
      * <ul>
      * <li>如果小于1秒钟内，显示刚刚</li>
@@ -957,14 +958,15 @@ public class TimeUtils {
         return data;
     }
 
-    public static String getTodayTime(){
+    public static String getTodayTime() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");// HH:mm:ss
         Date date = new Date(System.currentTimeMillis());
         return simpleDateFormat.format(date);
     }
 
     private static String getWeekDay(int day, int today) {
-        String s = null;switch (day) {
+        String s = null;
+        switch (day) {
             case 1:
                 s = "日";
                 break;
@@ -995,12 +997,12 @@ public class TimeUtils {
 
     /**
      * 根据提供的年月日获取该月份的第一天
+     *
+     * @param date
+     * @return
      * @Description: (这里用一句话描述这个方法的作用)
      * @Author: gyz
      * @Since: 2017-1-9下午2:26:57
-     * @param date
-     *
-     * @return
      */
     public static String getSupportBeginDayofMonth(Date date) {
         date.getTime();
@@ -1012,17 +1014,18 @@ public class TimeUtils {
         startDate.set(Calendar.SECOND, 0);
         startDate.set(Calendar.MILLISECOND, 0);
         Date firstDate = startDate.getTime();
-        return getStrTime((firstDate.getTime()+""));
+        return getStrTime((firstDate.getTime() + ""));
 
     }
 
     /**
      * 根据提供的年月获取该月份的最后一天
+     *
+     * @param date
+     * @return
      * @Description: (这里用一句话描述这个方法的作用)
      * @Author: gyz
      * @Since: 2017-1-9下午2:29:38
-     * @param date
-     * @return
      */
     public static String getSupportEndDayofMonth(Date date) {
         Calendar startDate = Calendar.getInstance();
@@ -1033,11 +1036,12 @@ public class TimeUtils {
         startDate.set(Calendar.SECOND, 59);
         startDate.set(Calendar.MILLISECOND, 999);
         Date firstDate = startDate.getTime();
-        return getStrTime((firstDate.getTime()+""));
+        return getStrTime((firstDate.getTime() + ""));
     }
 
     /**
      * 当天的开始时间
+     *
      * @return
      */
     public static long startOfTodDay() {
@@ -1046,11 +1050,13 @@ public class TimeUtils {
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
-        Date date=calendar.getTime();
+        Date date = calendar.getTime();
         return date.getTime();
     }
+
     /**
      * 当天的结束时间
+     *
      * @return
      */
     public static long endOfTodDay() {
@@ -1059,28 +1065,28 @@ public class TimeUtils {
         calendar.set(Calendar.MINUTE, 59);
         calendar.set(Calendar.SECOND, 59);
         calendar.set(Calendar.MILLISECOND, 999);
-        Date date=calendar.getTime();
+        Date date = calendar.getTime();
         return date.getTime();
     }
 
     //时间戳转字符串
-    public static String getStrTime(String timeStamp){
+    public static String getStrTime(String timeStamp) {
         String timeString = null;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        long  l = Long.valueOf(timeStamp);
+        long l = Long.valueOf(timeStamp);
         timeString = sdf.format(new Date(l));//单位秒
         return timeString;
     }
 
 
-    public static String getTimeOfYearStart(){
+    public static String getTimeOfYearStart() {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DAY_OF_YEAR, 1);
 
         return dateFormater.format(cal.getTime());
     }
 
-    public static String getTimeOfYearEnd(){
+    public static String getTimeOfYearEnd() {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DAY_OF_YEAR,
                 cal.getActualMaximum(Calendar.DAY_OF_YEAR));
@@ -1089,7 +1095,7 @@ public class TimeUtils {
 
 
     //获取前一天
-    public static String getBeforeTime(){
+    public static String getBeforeTime() {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, -1); //得到前一天
         Date date = calendar.getTime();
@@ -1098,29 +1104,29 @@ public class TimeUtils {
     }
 
     //获取本周的起始时间
-    public static String getTimeOfWeekStart(){
+    public static String getTimeOfWeekStart() {
         SimpleDateFormat dateFormater = new SimpleDateFormat(
                 "yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DAY_OF_WEEK, 1);
         cal.getTime();
-        return  dateFormater.format(cal.getTime()) + "";
+        return dateFormater.format(cal.getTime()) + "";
     }
 
     //获取本周的起始时间
-    public static String getTimeOfWeekEnd(){
+    public static String getTimeOfWeekEnd() {
         SimpleDateFormat dateFormater = new SimpleDateFormat(
                 "yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DAY_OF_WEEK,
                 cal.getActualMaximum(Calendar.DAY_OF_WEEK));
         cal.getTime();
-        return  dateFormater.format(cal.getTime());
+        return dateFormater.format(cal.getTime());
     }
 
 
     //获取本月的起始时间
-    public static String getTimeOfMonthStart(){
+    public static String getTimeOfMonthStart() {
         SimpleDateFormat dateFormater = new SimpleDateFormat(
                 "yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
@@ -1132,7 +1138,7 @@ public class TimeUtils {
 
 
     //获取本月的结束时间
-    public static String getTimeOfMonthEnd(){
+    public static String getTimeOfMonthEnd() {
         SimpleDateFormat dateFormater = new SimpleDateFormat(
                 "yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
@@ -1144,7 +1150,8 @@ public class TimeUtils {
 
 
     /**
-     *获取一个月前的日期
+     * 获取一个月前的日期
+     *
      * @param date 传入的日期
      * @return
      */
@@ -1158,6 +1165,99 @@ public class TimeUtils {
         return monthAgo;
     }
 
+    /**
+     * 计算当前月有多少天
+     *
+     * @return
+     */
+    public static int getDays(int year, int month) {
+        int days = 0;
+        if (month != 2) {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    days = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    days = 30;
+
+            }
+        } else {
+            // 闰年
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+                days = 29;
+            else
+                days = 28;
+        }
+        return days;
+    }
+
+
+    public static int differentDays(Date date1, Date date2) {
+        Calendar cal1 = Calendar.getInstance();
+        cal1.setTime(date1);
+
+        Calendar cal2 = Calendar.getInstance();
+        cal2.setTime(date2);
+        int day1 = cal1.get(Calendar.DAY_OF_YEAR);
+        int day2 = cal2.get(Calendar.DAY_OF_YEAR);
+
+        int year1 = cal1.get(Calendar.YEAR);
+        int year2 = cal2.get(Calendar.YEAR);
+        if (year1 != year2)   //同一年
+        {
+            int timeDistance = 0;
+            for (int i = year1; i < year2; i++) {
+                if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)    //闰年
+                {
+                    timeDistance += 366;
+                } else    //不是闰年
+                {
+                    timeDistance += 365;
+                }
+            }
+
+            return timeDistance + (day2 - day1);
+        } else    //不同年
+        {
+            return day2 - day1;
+        }
+    }
+
+    public static int differentDays(Calendar cal1, Calendar cal2) {
+
+        int day1 = cal1.get(Calendar.DAY_OF_YEAR);
+        int day2 = cal2.get(Calendar.DAY_OF_YEAR);
+
+        int year1 = cal1.get(Calendar.YEAR);
+        int year2 = cal2.get(Calendar.YEAR);
+        if (year1 != year2)   //同一年
+        {
+            int timeDistance = 0;
+            for (int i = year1; i < year2; i++) {
+                if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)    //闰年
+                {
+                    timeDistance += 366;
+                } else    //不是闰年
+                {
+                    timeDistance += 365;
+                }
+            }
+
+            return timeDistance + (day2 - day1);
+        } else    //不同年
+        {
+            return day2 - day1;
+        }
+    }
 
 
 }

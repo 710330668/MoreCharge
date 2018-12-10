@@ -55,6 +55,7 @@ public class WheelView extends ScrollView {
         if (null == items) {
             items = new ArrayList<String>();
         }
+        views.removeAllViews();
         items.clear();
         items.addAll(list);
 
@@ -63,7 +64,6 @@ public class WheelView extends ScrollView {
             items.add(0, "");
             items.add("");
         }
-
         initData();
 
     }
