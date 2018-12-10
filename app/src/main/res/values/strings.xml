@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">MoreCharge</string>
-    <string name="track_tips">提示：仅实时检测画面内面积最大的人脸</string>
 </resources>

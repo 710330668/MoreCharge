@@ -1,19 +1,16 @@
-package com.example.hdd.morecharge.usercenter.auth;
-
+package com.example.hdd.morecharge.release.main.ui.activity;
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.hdd.common.BaseActivity;
 import com.example.hdd.morecharge.R;
 
-/**
- * Created by 71033 on 2018/11/27.
- */
-public class IdentityAuthActivity extends BaseActivity {
+public class ContractPersonActivity extends BaseActivity {
 
     @Override
     public int bindLayout() {
-        return R.layout.activity_identity_auth;
+        return R.layout.activity_contract_person;
     }
 
     @Override
