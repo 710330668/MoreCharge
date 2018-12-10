@@ -88,6 +88,7 @@
 
 
                 <EditText
+                    android:id="@+id/et_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -118,6 +119,7 @@
 
 
                 <EditText
+                    android:id="@+id/et_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -155,8 +157,15 @@
                 android:layout_marginRight="13dp"
                 >
 
+                <ImageView
+                    android:id="@+id/iv_idcard_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
 
                 <LinearLayout
+                    android:id="@+id/lly_idcard_front"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -189,8 +198,15 @@
                 android:layout_marginTop="16dp"
                 >
 
+                <ImageView
+                    android:id="@+id/iv_idcard_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
 
                 <LinearLayout
+                    android:id="@+id/lly_idcard_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

@@ -1,1 +1,1 @@
-include ':app', ':common', ':net', ':imageloader', ':zxinglib',':ocr_ui'
+include ':app', ':common', ':net', ':imageloader', ':zxinglib',':ocr_ui','facesdk'
