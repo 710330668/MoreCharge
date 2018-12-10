@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/a_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FD8B06" />
+
+    <TextView
+        android:id="@+id/tv_location_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="13dp"
+        android:text="    "
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_location_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="13dp"
+        android:text="取消"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <EditText
+        android:id="@+id/et_search_address"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_edit_search_address"
+        android:hint="请输入位置"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textColorHint="#ffffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintLeft_toRightOf="@+id/tv_location_city"
+        app:layout_constraintRight_toLeftOf="@+id/tv_location_cancel"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_address"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_title_bar" />
+
+
+</android.support.constraint.ConstraintLayout>

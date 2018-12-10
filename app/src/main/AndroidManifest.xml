@@ -4,8 +4,26 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -48,12 +66,18 @@
 
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity"></activity>
+        <activity android:name=".release.main.ui.activity.BuySubBillingRuleActivity" />
+        <activity android:name=".release.main.ui.activity.ChooseAddressActivity" />
+        <activity android:name=".release.main.ui.activity.GaodeActivity" />
         <activity android:name=".usercenter.auth.BusinessLicActivity" />
         <activity android:name=".usercenter.setting.SettingActivity" />
         <activity android:name=".usercenter.setting.ChangePhoneActivity" />
         <activity android:name=".usercenter.setting.ChangePwActivity" />
         <activity android:name=".usercenter.setting.ChangePw2Activity" />
+        <activity
+            android:name=".receive.main.integrate.MyIntegrateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="我的积分" />
 
         <!--<activity-->
         <!--android:name=".receive.main.integrate.MyIntegrateActivity"-->
@@ -67,10 +91,10 @@
             android:name=".receive.main.address.AddressListActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="地址列表" />
-        <!--<activity-->
-        <!--android:name=".receive.main.scan.ScanActivity"-->
-        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-        <!--android:label="扫码应用demo" />-->
+        <!-- <activity -->
+        <!-- android:name=".receive.main.scan.ScanActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="扫码应用demo" /> -->
 
         <activity
             android:name=".receive.main.goodsdetail.GoodsToPayActivity"
@@ -82,6 +106,8 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="选择地址"
             android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".release.main.ui.activity.ContractPersonActivity" />
+        <activity android:name=".release.main.ui.activity.ContractProjectActivity" />
         <activity android:name=".usercenter.wallet.WaterSubsidiaryActivity" />
         <activity android:name=".usercenter.wallet.BankCardActivity" />
         <activity android:name=".usercenter.ComplainSuggestActivity" />
@@ -94,6 +120,10 @@
             android:name=".receive.main.myskills.MySkillsAddActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="技能添加" />
+        <!-- <activity -->
+        <!-- android:name=".receive.main.myskills.MySkillsCheckActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="技能查看" /> -->
         <activity
             android:name=".receive.main.myskills.MySkillsCheckActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -110,6 +140,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="商品详情" />
 
+        <activity android:name=".release.main.ui.activity.SearchAddressActivity"></activity>
     </application>
 
 </manifest>

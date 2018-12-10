@@ -84,12 +84,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-
                         android:text="您要买什么"
                         android:textColor="#666666"
                         app:layout_constraintLeft_toLeftOf="parent" />
 
                     <EditText
+                        android:textColor="#999999"
+                        android:textSize="7sp"
                         android:id="@+id/et_want_buy"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -123,6 +124,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/line_1" />
 
                     <EditText
+                        android:id="@+id/et_buy_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -183,12 +185,13 @@
                         app:layout_constraintLeft_toRightOf="@+id/tv_appoint_address"
                         app:layout_constraintTop_toTopOf="@+id/tv_appoint_address" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/tv_where_buy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="在哪里购买"
+                        android:hint="在哪里购买"
+                        android:background="@drawable/bg_et_empty"
                         android:textSize="11sp"
                         app:layout_constraintLeft_toLeftOf="@+id/tv_appoint_address"
                         app:layout_constraintTop_toBottomOf="@+id/tv_appoint_address" />
@@ -247,11 +250,13 @@
                         app:layout_constraintLeft_toLeftOf="@+id/line_1"
                         app:layout_constraintTop_toBottomOf="@+id/line_4" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/tv_recommend_cost"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="推荐费用 10元"
+                        android:background="@drawable/bg_empty"
+                        android:hint="推荐费用 10元"
+                        android:inputType="number"
                         android:textColor="#999999"
                         android:textSize="11sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_cost"
@@ -595,7 +600,7 @@
                         android:layout_height="0dp"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/bg_empty"
-                        android:hint="请填写您的地址"
+                        android:hint="物品描述或送件要求"
                         android:textColorHint="#999999"
                         android:textSize="11sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_remark"

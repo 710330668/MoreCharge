@@ -289,7 +289,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="共 8 天"
-                android:textColor="#ff999999"
+                android:textColor="#FD8B06"
                 android:textSize="11sp" />
 
             <View
@@ -541,6 +541,7 @@
                 android:layout_height="127dp"/>
 
             <TextView
+                android:id="@+id/tv_build_person_order"
                 android:gravity="center"
                 android:text="点击发布"
                 android:textColor="#ffffffff"

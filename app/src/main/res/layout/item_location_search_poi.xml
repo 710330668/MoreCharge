@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/iv_loaction"
+        android:layout_width="13dp"
+        android:layout_height="15dp"
+        android:src="@mipmap/location_gray" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_loaction"
+        android:id="@+id/tv_position_1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_position_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北胡校区1号楼1单元1502"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_position_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_position_1"
+        android:id="@+id/tv_position_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="山东省济南市港沟街道"
+        android:textColor="#ff999999"
+        android:textSize="11sp"
+        />
+</android.support.constraint.ConstraintLayout>

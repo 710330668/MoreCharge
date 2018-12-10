@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rb_type_of_work"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_marginBottom="13dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
+    android:background="@drawable/rb_person_type_work_selector"
+    android:button="@null"
+    android:gravity="center"
+    android:textColor="@drawable/bg_tc_type_of_work_selector"
+    android:textSize="13sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
