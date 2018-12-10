@@ -288,7 +288,6 @@
                 app:layout_constraintTop_toTopOf="@+id/rect_end_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="共 8 天"
                 android:textColor="#FD8B06"
                 android:textSize="11sp" />
 

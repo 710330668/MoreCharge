@@ -61,6 +61,7 @@
             android:id="@+id/tips_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/track_tips"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="18sp" />
     </LinearLayout>

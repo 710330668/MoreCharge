@@ -1,14 +1,8 @@
 package com.example.hdd.morecharge.receive.main.goodsdetail;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,30 +11,20 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hdd.common.BaseActivity;
-import com.example.hdd.common.util.LogUtils;
+import com.example.hdd.common.util.ToastUtils;
 import com.example.hdd.morecharge.R;
-import com.example.hdd.morecharge.receive.main.goodsdetail.entry.GoodsDetailResponseEntity;
-import com.example.hdd.morecharge.receive.main.goodsdetail.goodsadapter.GoodsSimpleBottomAdapter;
-import com.example.hdd.morecharge.receive.main.goodsdetail.goodsdetailpage.GoodsDetailFragment;
-import com.example.hdd.morecharge.receive.main.goodsdetail.goodsdetailpage.GoodsDetailInfoFragment;
 import com.example.hdd.morecharge.receive.main.goodsdetail.widget.AmountView;
-import com.example.hdd.morecharge.receive.main.myskills.TempConstant;
-import com.example.hdd.morecharge.remote.Injection;
 import com.example.hdd.morecharge.ui.widget.TopBar;
-import com.example.hdd.morecharge.utils.GsonUtil;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 public class GoodsDetailActivity extends BaseActivity {
+
 
     @BindView(R.id.goods_detail_banner)
     Banner goodsDetailBanner;
@@ -52,25 +36,8 @@ public class GoodsDetailActivity extends BaseActivity {
     Button goodsDetailChangeBtn;
     @BindView(R.id.goods_detail_topbar)
     TopBar goodsDetailTopbar;
-
-    private static String mGoodsId;
-    @BindView(R.id.goods_detail_integate)
-    TextView goodsDetailIntegate;
-    @BindView(R.id.goods_detail_price)
-    TextView goodsDetailPrice;
-    @BindView(R.id.goods_detail_sliding_tabs)
-    TabLayout goodsDetailSlidingTabs;
-    @BindView(R.id.goods_detail_viewpager)
-    ViewPager goodsDetailViewpager;
-
-    private GoodsSimpleBottomAdapter goodsSimpleBottomAdapter;
-
-
-    public static void actionStart(Context context, String id) {
-
-        mGoodsId = id;
-        context.startActivity(new Intent(context, GoodsDetailActivity.class));
-    }
+//    @BindView(R.id.btn)
+//    Button btn;
 
     @Override
     public int bindLayout() {
@@ -80,10 +47,6 @@ public class GoodsDetailActivity extends BaseActivity {
     @Override
     public void initParams(Bundle params) {
 
-        if (TextUtils.isEmpty(mGoodsId)) {
-            onBackPressed();
-        }
-
     }
 
     BottomSheetDialog bottomSheetDialog;
@@ -92,8 +55,8 @@ public class GoodsDetailActivity extends BaseActivity {
     @Override
     public void setView(Bundle savedInstanceState) {
         initTopBar();
+        initBanner();
         initBottomSheetDialog();
-
 
         goodsDetailChangeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +66,6 @@ public class GoodsDetailActivity extends BaseActivity {
         });
 
     }
-
 
     private void initBottomSheetDialog() {
         bottomSheetDialog = new BottomSheetDialog(this);
@@ -118,12 +80,12 @@ public class GoodsDetailActivity extends BaseActivity {
 
                 Log.i("amount====amount", "onAmountChange: " + amount);
 
-
             }
         });
         goodsChageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ToastUtils.showLong(GoodsDetailActivity.this, "点击");
                 bottomSheetDialog.hide();
                 initBottomPayDialog();
             }
@@ -143,7 +105,6 @@ public class GoodsDetailActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 bottomPayDialog.hide();
-//                TODO 向后 传递数据
                 startActivity(GoodsToPayActivity.class);
             }
         });
@@ -167,61 +128,14 @@ public class GoodsDetailActivity extends BaseActivity {
 
     }
 
-
-    @Override
-    public void doBusiness(Context mContext) {
-
-        getGoodsInfo();
-
-    }
-
-    @SuppressLint("CheckResult")
-    private void getGoodsInfo() {
-        Injection.provideApiService().getGoodsInfo(TempConstant.token, mGoodsId)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<GoodsDetailResponseEntity>() {
-                    @Override
-                    public void accept(GoodsDetailResponseEntity goodsDetailResponseEntity) throws Exception {
-                        if (goodsDetailResponseEntity != null && goodsDetailResponseEntity.isSuccess()) {
-
-                            initContentData(goodsDetailResponseEntity);
-                        }
-
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-//                        ToastUtils.showShort(GoodsDetailActivity.this, throwable.getMessage());
-                        LogUtils.i(throwable.getMessage());
-
-                    }
-                });
-
-
-    }
-
-    private void initContentData(GoodsDetailResponseEntity responseEntity) {
-
-        GoodsDetailResponseEntity.DataBean data = responseEntity.getData();
-
-        initBanner(data);
-
-        initGoodsDetail(data);
-
-        initBottomDetailInfo(data);
-    }
-
-    private void initBanner(GoodsDetailResponseEntity.DataBean data) {
-
+    private void initBanner() {
         List<String> urls = new ArrayList<>();
 
-        List<GoodsDetailResponseEntity.DataBean.BannersBean> banners = data.getBanners();
-
-        for (int i = 0; i < banners.size(); i++) {
-
-            urls.add(banners.get(i).getFileUrl());
-        }
+        urls.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic1xjab4j30ci08cjrv.jpg");
+        urls.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
+        urls.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
+        urls.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
+        urls.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2e7vsaj30ci08cglz.jpg");
 
         goodsDetailBanner.setImages(urls)
                 .setImageLoader(new GlideImageLoader())
@@ -229,57 +143,8 @@ public class GoodsDetailActivity extends BaseActivity {
 
     }
 
-    private void initGoodsDetail(GoodsDetailResponseEntity.DataBean data) {
-
-        LogUtils.i(GsonUtil.GsonString(data));
-
-        goodsDetailTitle.setText(data.getName());
-        goodsDetailIntegate.setText(new BigDecimal(data.getIntegral()).toPlainString());
-        goodsDetailPrice.setText("市场价" + data.getPrice() + "元");
-
-
-    }
-
-    private void initBottomDetailInfo(GoodsDetailResponseEntity.DataBean data) {
-
-        List<GoodsDetailResponseEntity.DataBean.InformationBean> information = data.getInformation();
-
-        if (information != null && information.size() > 0) {
-
-            GoodsDetailResponseEntity.DataBean.InformationBean informationBean = information.get(0);
-
-            List<Fragment> fragments = new ArrayList<>();
-
-            GoodsDetailFragment detailFragment = new GoodsDetailFragment();
-
-            Bundle bundle = new Bundle();
-            bundle.putString("picUrl", informationBean.getFileUrl());
-            detailFragment.setArguments(bundle);
-
-            fragments.add(detailFragment);
-
-            GoodsDetailInfoFragment infoFragment = new GoodsDetailInfoFragment();
-
-            Bundle bundleInfo = new Bundle();
-//            bundleInfo.putString("goodsInfo", informationBean.getFileName());
-            bundleInfo.putString("goodsInfo", data.getExplainText());
-            infoFragment.setArguments(bundleInfo);
-            fragments.add(infoFragment);
-
-            List<String> titles = new ArrayList<>();
-
-            titles.add("详情");
-            titles.add("介绍");
-
-            goodsSimpleBottomAdapter = new GoodsSimpleBottomAdapter(getSupportFragmentManager(), this, fragments, titles);
-
-            goodsDetailViewpager.setAdapter(goodsSimpleBottomAdapter);
-
-            goodsDetailSlidingTabs.setupWithViewPager(goodsDetailViewpager);
-            goodsDetailSlidingTabs.setTabMode(TabLayout.MODE_FIXED);
-
-        }
-
+    @Override
+    public void doBusiness(Context mContext) {
 
     }
 

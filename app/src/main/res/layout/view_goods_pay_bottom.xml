@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
     android:orientation="vertical">
 
 
@@ -34,8 +33,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="right"
+            android:text="300 积分"
             android:textColor="#FD8B06"
             android:textSize="@dimen/font_normal_size" />
+
 
 
     </RelativeLayout>

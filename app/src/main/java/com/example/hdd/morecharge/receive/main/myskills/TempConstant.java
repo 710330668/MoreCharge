@@ -2,8 +2,6 @@ package com.example.hdd.morecharge.receive.main.myskills;
 
 public class TempConstant {
 
-    public static final String token = "Bearer b4b84b78-be34-4cc5-815b-1092fff887d9";
-
-    public static double MY_INTEGRATE = 0f;
+    public static final String token="Bearer c9f82232-a776-484a-84d5-935a1e59a1e2";
 
 }

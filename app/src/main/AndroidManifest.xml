@@ -78,11 +78,6 @@
             android:name=".receive.main.integrate.MyIntegrateActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="我的积分" />
-
-        <!--<activity-->
-        <!--android:name=".receive.main.integrate.MyIntegrateActivity"-->
-        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-        <!--android:label="我的积分" />-->
         <activity
             android:name=".receive.main.goodsdetail.GoodsMoreActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -99,8 +94,7 @@
         <activity
             android:name=".receive.main.goodsdetail.GoodsToPayActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="去支付 中的商品详情"
-            android:launchMode="singleTask" />
+            android:label="去支付 中的商品详情" />
         <activity
             android:name=".receive.main.address.GoodsLacationFromMapActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -112,10 +106,6 @@
         <activity android:name=".usercenter.wallet.BankCardActivity" />
         <activity android:name=".usercenter.ComplainSuggestActivity" />
         <activity android:name=".receive.main.ReceiveOrderDetailActivity" />
-        <!--<activity-->
-        <!--android:name=".receive.main.myskills.MySkillsActivity"-->
-        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-        <!--android:label="技能菜单" />-->
         <activity
             android:name=".receive.main.myskills.MySkillsAddActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -125,20 +115,12 @@
         <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
         <!-- android:label="技能查看" /> -->
         <activity
-            android:name=".receive.main.myskills.MySkillsCheckActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="技能查看" />
-        <activity
             android:name=".receive.main.myskills.AddSkillsDetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="查看技能详情" />
         <activity android:name=".usercenter.MyReceiveOrdersActivity" />
         <activity android:name=".receive.main.ReceiveAppraiseActivity" />
         <activity android:name=".usercenter.auth.DetectActivity" />
-        <activity
-            android:name=".receive.main.goodsdetail.GoodsDetailActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="商品详情" />
 
         <activity android:name=".release.main.ui.activity.SearchAddressActivity"></activity>
     </application>

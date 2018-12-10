@@ -124,7 +124,6 @@ public class ArchitectureFragment extends BaseFragment implements AMapLocationLi
             case R.id.et_person_choose_address:
                 startActivityForResult(new Intent(getContext(), ChooseAddressActivity.class), REQUEST_CODE_PERSON);
                 break;
-
         }
     }
 

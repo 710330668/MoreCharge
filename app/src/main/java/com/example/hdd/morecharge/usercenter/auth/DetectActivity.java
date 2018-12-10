@@ -90,6 +90,7 @@ public class DetectActivity extends AppCompatActivity {
         manager.getDefaultDisplay().getMetrics(outMetrics);
         mScreenW = outMetrics.widthPixels;
         mScreenH = outMetrics.heightPixels;
+        mRound = getResources().getDimensionPixelSize(R.dimen.round);
     }
 
     /**
