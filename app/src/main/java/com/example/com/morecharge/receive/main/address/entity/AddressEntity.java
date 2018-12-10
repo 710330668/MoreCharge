@@ -12,8 +12,35 @@ public class AddressEntity {
 
     private boolean success;
     private String msg;
+    private String title;
+    private String type;
+    private int holderType;
     private int code;
     private List<DataBean> data;
+
+    public int getHolderType() {
+        return holderType;
+    }
+
+    public void setHolderType(int holderType) {
+        this.holderType = holderType;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public boolean isSuccess() {
         return success;
