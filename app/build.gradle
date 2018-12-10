@@ -69,4 +69,5 @@ dependencies {
     implementation project(':ocr_ui')
     implementation project(':facesdk')
     implementation project(':zxinglib')
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.5.0'
 }
